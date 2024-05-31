@@ -100,6 +100,9 @@
     .audioCustom{
         font-size: 10px;
     }
+    .audioBtn img{
+        width: 15px;
+    }
 }
 
 /* 가로모드 모바일 디바이스 (가로 해상도가 576px보다 크고 768px 보다 작은 화면에 적용)  */
@@ -191,6 +194,9 @@
     .audioCustom{
         font-size: 10px;
     }
+    .audioBtn img{
+        width: 10px;
+    }
 }
 
 /*태블릿 디바이스 (가로 해상도가 768px보다 크고 991px 보다 작은 화면에 적용)  */
@@ -273,6 +279,9 @@
     }
     .audioCustom{
         font-size: 18px;
+    }
+    .audioBtn img{
+        width: 35px;
     }
 }
 
@@ -380,6 +389,9 @@
     .audioCustom{
         font-size: 13px;
     }
+    .audioBtn img{
+        width: 15px;
+    }
 }
 
 /* 큰화면 데스크탑 (가로 해상도가 1200px 보다 큰 화면에 적용)  */
@@ -485,6 +497,9 @@
     }
     .audioCustom{
         font-size: 13px;
+    }
+    .audioBtn img{
+        width: 15px;
     }
 }
 
@@ -934,58 +949,64 @@ section {
     color: white;
     padding: 0.5em;
 }
+.music .SmallBoxMain{
+    padding: 0.5em;
+    gap: 0.3em;
+}
 .audioCustom{
     float: right;
     width: 60%;
     font-family: 'SUITE-Regular';
-    padding-right: 1.5em;
 }
 .audioImg{
     float: left;
     width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .audioImg img{
     height: 100%;
     width: 100%;
 }
-
-#audioBar, #audioVolume{
-    width: 100%;
-}
 #durationTime{
     float: right;
 }
-.audioBtn{
-    display: flex;
-}
-.audioBtn button{
-    width: 30%;
-    text-align: center;
-    border: 1px solid #c2c4ec;
-    background-color: #d6d7f2;
-    box-shadow: 1px 1px 2px #92929290;
-    color: white;
-    border-radius: 1em;
-    cursor: pointer;
+.audioBtn, .audioRange{
     display: flex;
     align-items: center;
-    justify-content: center;
+}
+.audioBtn{
+    width: 100%;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+}
+.audioBtn img{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-self: left;
+}
+.audioBtn button{
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
     transition: 0.3s;
 }
 .audioBtn button:hover{
-    background-color: #c7c9f4;
+    filter: invert(0%) sepia(93%) saturate(0%) hue-rotate(284deg) brightness(107%) contrast(107%);
 }
-#audioPlay{
-    margin-right: 0.3em;
+.audioBtnSet{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    justify-self: center;
 }
-.audioBtn button img{
-    height: 60%;
-}
-.audioBtn input{
-    width: 30%;
-}
-.active{
-    background-color: #000000;
+#audioVolumn{
+    grid-column-start: 3;
+    justify-self: right;
 }
 /* 부드러운 스크롤 */
 .fade-wrap {
@@ -1001,36 +1022,31 @@ section {
 }
 
 /* input:range 커스텀 */
-input[type='range'] {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 5px;
-    border-radius: 5px;
-    background: #d3d3d3;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+input[type='range']{
+    -webkit-appearance: none; /* 기본 CSS 스타일을 적용하지 않기 위해서 */
+    width: 100%; /* 슬라이더 길이 */
+    height: 7px; /* 슬라이더 두께 */
+    border-radius: 5px; /* 슬라이더 모서리를 약간 둥글게 */
+    background: linear-gradient(to right, #d5d5f4, #e9d0d6);
+    outline: none; /* 슬라이더 테두리 없이 */
 }
 
-input[type='range']:hover {
-    opacity: 1;
-}
-
-input[type='range'] ::-webkit-slider-thumb {
+/* 슬라이더 핸들(클릭해서 드래그하는 부분) 커스텀  */
+input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 15px;
-    height: 15px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
-    background: #ff3b3b;
-    cursor: pointer;
+    background: rgb(230, 230, 255);
+    border: 1px solid rgb(189, 189, 239);
+    cursor: pointer; /* 슬라이더 핸들에 마우스를 갖다대면 포인터로 변경 */
 }
-
-input[type='range'] ::-moz-range-thumb {
-    width: 15px;
-    height: 15px;
+input[type='range']::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
-    background: #ff3b3b;
-    cursor: pointer;
+    background: rgb(230, 230, 255); 
+    border: 1px solid rgb(189, 189, 239);
+    cursor: pointer; /* 슬라이더 핸들에 마우스를 갖다대면 포인터로 변경 */
 }

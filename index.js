@@ -90,6 +90,7 @@ function goToScroll(name) {
 $(function () {
   // const myAudio = document.getElementById("myAudio");
   const myAudio = new Audio("music.mp3");
+  myAudio.volume = 1;
   // 오디오 재생시간 업데이트
   const audioBar = document.getElementById("audioBar");
   const currentTimeSpan = document.getElementById("currentTime");
@@ -130,14 +131,10 @@ $(function () {
   const pause = document.getElementById("audioStop");
   play.onclick = function () {
     myAudio.play();
-    play.style.boxShadow = "inset 1px 1px 2px #92929290";
-    pause.style.boxShadow = "1px 1px 2px #92929290";
     audioImg.animate(keyframes, options);
   };
   pause.onclick = function () {
     myAudio.pause();
-    pause.style.boxShadow = "inset 1px 1px 2px #92929290";
-    play.style.boxShadow = "1px 1px 2px #92929290";
     // 현재 요소의 회전 각도 가져오기
     let computedStyle = window.getComputedStyle(audioImg);
     let transformValue = computedStyle.getPropertyValue("transform");
@@ -155,7 +152,17 @@ $(function () {
   };
 
   // 볼륨조절
-  const audioVolume = document.getElementById("audioVolume");
+  const audioVolume = document.getElementById("audioVolumn");
+  audioVolume.onclick = function(){
+    if(myAudio.volume === 1.0 ){
+      document.getElementById("audioVolumnImg").src = "images/volume-x.svg";
+      myAudio.volume = 0;
+    }
+    else{
+      document.getElementById("audioVolumnImg").src = "images/volume-2.svg";
+      myAudio.volume = 1;
+    }
+  }
   audioVolume.addEventListener("input", () => {
     myAudio.value = audioVolume.value;
   });
