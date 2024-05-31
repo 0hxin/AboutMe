@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="stars"></div>
+            <div class="headerWave"></div>
+            <div class="headerSection">
+                <div class="title">
+                    <span>
+                        About Me
+                    </span>
+                </div>
+                <div class="titleName">
+                    From&nbsp;Park&nbsp;AeJin
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="fade-wrap" id="ProfileSection">
+                <div class="whiteBox">
+                    <div class="whiteBoxheader">
+                        <span class="whiteBoxheaderTitle">Profile</span>
+                        <div class="headerSubmit">
+                            <button onclick="goToScroll('ProfileSection')" disabled>
+                                Profile
+                            </button>
+                            <button onclick="goToScroll('HistorySection')">
+                                History
+                            </button>
+                            <button onclick="goToScroll('SkillSection')">
+                                Skill
+                            </button>
+                        </div>
+                    </div>
+                    <div class="whiteBoxMain ProfileSection">
+                        <div class="SmallBox photo">
+                            <div class="SmallBoxheader">
+                                <span>●</span>
+                                <span>●</span>
+                                <span>●</span>
+                            </div>
+                        </div>
+                        <div class="ProfileTitle">
+                            <div class="SmallBox">
+                                <div class="SmallBoxheader">
+                                    <span>−</span>
+                                    <span>◻</span>
+                                    <span>⤫</span>
+                                </div>
+                                <div class="SmallBoxMain">
+                                    <i>My Profile</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Information">
+                            <div class="SmallBox">
+                                <div class="SmallBoxheader">
+                                    <span>●</span>
+                                    <span>●</span>
+                                    <span>●</span>
+                                    <span class="Text-right">Profile</span>
+                                </div>
+                                <div class="SmallBoxMain">
+                                    <div class="InformationSectionOne">
+                                        <div class="MyInformation">
+                                            <table>
+                                                <tr>
+                                                    <td class="name">
+                                                        박애진, Park Ae Jin
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>🎂2001.03.13</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>📧qkrdowls1890@naver.com</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="MyFavorite">
+                                            <div>
+                                                <span class="FavoriteTitle">Game</span>
+                                                <div class="Favorite">
+                                                    <span>Sims4</span>
+                                                </div>
+                                                <div class="Favorite">
+                                                    <span>Stardew Vally</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <span class="FavoriteTitle">Music</span>
+                                                <div class="Favorite">
+                                                    <span>Ariana Grande</span>
+                                                </div>
+                                                <div class="Favorite">
+                                                    <span>aespa</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="InformationSectionTwo">
+                                        <div class="MySns">
+                                            <a class="Instagram" href="https://www.instagram.com/gfedcbaejin">
+                                                <div class="InstagramText">
+                                                    <span>gfedcbaejin</span>
+                                                    <img src="images/more-horizontal.svg" class="Text-right">
+                                                </div>
+                                                <div class="InstagramMain">
+                                                    <span>
+                                                        <img src="images/heart.png">
+                                                    </span>
+                                                </div>
+                                                <div class="InstagramText">
+                                                    <img src="images/heart.svg">
+                                                    <img src="images/message-circle.svg">
+                                                    <img src="images/bookmark.svg" class="Text-right">
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="music">
+                            <div class="SmallBox">
+                                <div class="SmallBoxheader">
+                                    <span>⭐</span>
+                                    <span>Music</span>
+                                    <span class="Text-right">⟳</span>
+                                </div>
+                                <div class="SmallBoxMain">
+                                    <div class="audioImg">
+                                        <img id="audioImg" src="images/vinyl.png">
+                                    </div>
+                                    <div class="audioCustom">
+                                        <div class="audioRange">
+                                            <input type="range" id="audioBar" value="0" max="100">
+                                        </div>
+                                        <div>
+                                            <span id="currentTime">0:00</span>
+                                            <span id="durationTime">0:00</span>
+                                        </div>
+                                        <div class="audioBtn">
+                                            <button id="audioPlay"><img src="images/play.png"></button>
+                                            <button id="audioStop">
+                                                <img src="images/stop.png">
+                                            </button>
+                                            <input id="audioVolume" type="range" min="0" max="1" step="0.01" value="1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="fade-wrap" id="HistorySection">
+                <div class="whiteBox">
+                    <div class="whiteBoxheader">
+                        <span class="whiteBoxheaderTitle">History</span>
+                        <div class="headerSubmit">
+                            <button onclick="goToScroll('ProfileSection')">
+                                Profile
+                            </button>
+                            <button onclick="goToScroll('HistorySection')" disabled>
+                                History
+                            </button>
+                            <button onclick="goToScroll('SkillSection')">
+                                Skill
+                            </button>
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="fade-wrap" id="SkillSection">
+                <div class="whiteBox">
+                    <div class="whiteBoxheader">
+                        <span class="whiteBoxheaderTitle">Skill</span>
+                        <div class="headerSubmit">
+                            <button onclick="goToScroll('ProfileSection')">
+                                Profile
+                            </button>
+                            <button onclick="goToScroll('HistorySection')">
+                                History
+                            </button>
+                            <button onclick="goToScroll('SkillSection')" disabled>
+                                Skill
+                            </button>
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="fade-wrap">
+
+            </div>
+        </footer>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
