@@ -23,6 +23,9 @@
 
 /* 세로모드 모바일 디바이스 (가로 해상도가 576px 보다 작은 화면에 적용) */
 @media (max-width: 575px) {
+    .SmallBoxheader span {
+        font-size: 10px;
+    }
 
     /* main-Profile */
     .ProfileSection {
@@ -34,74 +37,109 @@
 
     .photo {
         grid-column: 1/2;
-        grid-column-start: 1;
-        grid-row-start: 1;
-    }
-
-    .SmallBoxheader span {
-        font-size: 10px;
+        grid-row: 1/2;
     }
 
     .ProfileTitle {
-        grid-column: 1/2;
-        grid-column-start: 2;
-        grid-row-start: 1;
+        grid-column: 2/3;
+        grid-row: 1/2;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    .ProfileTitle .SmallBox {
+    .ProfileTitle .SmallBox,
+    .AboutMeTitle .SmallBox {
         height: 80%;
     }
 
-    .ProfileTitle .SmallBox i {
+    .ProfileTitle .SmallBox i,
+    .AboutMeTitle .SmallBox i {
         font-size: 28px;
     }
 
     .Information {
-        grid-column: 1/2;
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 4;
+        grid-column: 1/3;
+        grid-row: 2/4;
+        font-size: 17px;
+    }
+    .MyInformation table th {
+        font-size: 20px;
+    }
+    .Information .SmallBoxMain{
+        display: flex;
+        flex-direction: column;
     }
 
-    .InformationSectionTwo {
+    .SnsSection,
+    .AboutMeImg {
         display: none;
     }
 
-    .InformationSectionOne {
-        font-size: 15px;
-    }
-
-    .MyInformation {
-        height: 45%;
-        align-items: center;
-    }
-
-    .MyFavorite {
-        align-items: start;
-        height: 55%;
-        gap: 0.5em;
-    }
-
-    .FavoriteTitle,
-    .name {
-        font-size: 20px;
-    }
-
     .music {
-        grid-column: 1/2;
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 4;
+        grid-column: 1/3;
+        grid-row: 4/5;
     }
-    .audioCustom{
+
+    .audioCustom {
         font-size: 10px;
     }
-    .audioBtn img{
+
+    .audioBtn img {
         width: 15px;
+    }
+
+    /* main-AboutMe */
+    .AboutMeTitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+
+    /* main-History */
+    .HistorySection {
+        grid-row: 3/5;
+        grid-column: 1/3;
+        font-size: 15px;
+    }
+    .Year, .Skill span{
+        font-size: 18px;
+    }
+    .History{
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-rows: repeat(2, auto);
+    }
+    .HistoryLeft{
+        grid-row: 1/2;
+    }
+    .HistoryRight{
+        grid-row: 2/3;
+    }
+    .HistoryLeft, .HistoryRight{
+        display: grid;
+        grid-template-columns: 0.1fr 1fr;
+    }
+    .Year{
+        grid-column: 1/3;
+    }
+    .Month{
+        grid-column: 2/3;
+    }
+    /* main-Skill */
+    .SkillSection {
+        grid-row: 1/2;
+        grid-column: 2/3;
+    }
+
+    .SkillSection2 {
+        grid-row: 2/3;
+        grid-column: 1/3;
+        display: flex;
+        gap: 0.5em;
     }
 }
 
@@ -115,10 +153,8 @@
     }
 
     .photo {
-        grid-column: 1/4;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
+        grid-column: 1/2;
+        grid-row: 1/2;
     }
 
     .SmallBoxheader span {
@@ -126,76 +162,102 @@
     }
 
     .ProfileTitle {
-        grid-column: 1/4;
-        grid-column-start: 2;
-        grid-column-end: 5;
-        grid-row-start: 1;
+        grid-column: 2/5;
+        grid-row: 1/2;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    .ProfileTitle .SmallBox {
+    .ProfileTitle .SmallBox,
+    .AboutMeTitle .SmallBox {
         height: 90%;
     }
 
-    .ProfileTitle .SmallBoxMain {
+    .ProfileTitle .SmallBoxMain,
+    .AboutMeTitle .SmallBoxMain {
         font-size: 50px;
     }
 
     .Information {
-        grid-column: 1/4;
-        grid-column-start: 2;
-        grid-column-end: 5;
-        grid-row-start: 2;
-    }
-
-    .InformationSectionTwo {
-        display: none;
-    }
-
-    .MyInformation {
-        width: 50%;
-        float: left;
-        align-items: center;
-        text-wrap: nowrap;
-    }
-
-    .MyFavorite {
-        float: right;
-        width: 50%;
-        align-items: start;
-    }
-
-    .Favorite,
-    .MyInformation {
+        grid-column: 2/5;
+        grid-row: 2/3;
         font-size: 13px;
     }
-
-    .Favorite {
-        padding-left: 1.8em;
-        text-indent: -1.8em;
-    }
-
-    .FavoriteTitle,
-    .name {
+    .Information table th{
         font-size: 15px;
     }
 
+    .SnsSection, .AboutMeImg {
+        display: none;
+    }
+
     .music {
-        grid-column: 1/4;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
+        grid-column: 1/2;
+        grid-row: 2/3;
     }
-    .durationSpan{
+
+    .durationSpan, .audioCustom {
         font-size: 10px;
     }
-    .audioCustom{
-        font-size: 10px;
-    }
-    .audioBtn img{
+    .audioBtn img {
         width: 10px;
+    }
+
+    /* main-AboutMe */
+    .AboutMeTitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-row: 1/2;
+        grid-column: 1/4;
+    }
+
+    /* main-History */
+    .HistorySection {
+        grid-row: 2/3;
+        grid-column: 1/3;
+        font-size: 10px;
+    }
+    .History{
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: repeat(2, auto);
+        text-wrap: nowrap;
+    }
+    .HistoryLeft,
+    .HistoryRight{
+        display: grid;
+        grid-template-columns: 0.1fr 1fr;
+        grid-template-rows: repeat(8, 1fr);
+    }
+    .HistoryLeft{
+        grid-column: 1/2;
+    }
+    .HistoryRight{
+        grid-column: 2/3;
+    }
+    .Year{
+        grid-column: 1/3;
+        font-size: 12px;
+    }
+    .Month{
+        grid-column: 2/3;
+    }
+
+    /* main-Skill */
+    .SkillSection {
+        grid-row: 1/2;
+        grid-column: 4/5;
+        font-size: 10px;
+    }
+
+    .SkillSection2 {
+        grid-row: 2/3;
+        grid-column: 3/5;
+        display: flex;
+        gap: 0.5em;
     }
 }
 
@@ -203,15 +265,14 @@
 @media (min-width: 768px) and (max-width: 991px) {
     .ProfileSection {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
         grid-template-rows: 2fr 2fr 1fr 2fr;
         gap: 0.5em;
     }
 
     .photo {
-        grid-column: 1/3;
-        grid-column-start: 1;
-        grid-column-end: 2;
+        grid-column: 1/2;
+        grid-row: 1/2;
     }
 
     .SmallBoxheader span {
@@ -219,69 +280,116 @@
     }
 
     .ProfileTitle {
-        grid-column: 1/3;
-        grid-column-start: 2;
-        grid-column-end: 4;
+        grid-column: 2/5;
+        grid-row: 1/2;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    .ProfileTitle .SmallBox {
+    .ProfileTitle .SmallBox,
+    .AboutMeTitle .SmallBox {
         height: 60%;
     }
 
-    .ProfileTitle .SmallBoxMain {
+    .ProfileTitle .SmallBoxMain,
+    .AboutMeTitle .SmallBoxMain {
         font-size: 55px;
     }
 
     .Information {
         grid-column: 1/3;
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 4;
-    }
-    .InformationSectionOne,
-    .InformationSectionTwo {
-        width: 50%;
-        height: 100%;
-        text-wrap: nowrap;
-    }
-
-    .InformationSectionOne {
-        float: left;
-    }
-
-    .InformationSectionTwo {
-        float: right;
-    }
-
-    .MyFavorite {
-        flex-direction: column;
-    }
-
-    .Favorite,
-    .MyInformation {
+        grid-row: 2/4;
         font-size: 20px;
     }
-
-    .FavoriteTitle,
-    .name {
+    .Information table th{
         font-size: 25px;
+    }
+    .Information .SmallBoxMain{
+        display: flex;
+        flex-direction: column;
+    }
+    .SnsSection{
+        grid-column: 3/5;
+        grid-row: 2/4;
     }
 
     .music {
-        grid-column: 1/3;
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 4;
+        grid-column: 1/5;
+        grid-row: 4/5;
     }
-    .audioCustom{
+
+    .audioCustom {
         font-size: 18px;
     }
-    .audioBtn img{
+
+    .audioBtn img {
         width: 35px;
+    }
+
+    /* main-AboutMe */
+    .AboutMeTitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-row: 1/2;
+        grid-column: 1/4;
+    }
+
+    .AboutMeImg {
+        grid-row: 1/2;
+        grid-column: 4/5;
+    }
+
+    /* main-History */
+    .HistorySection {
+        grid-row: 3/5;
+        grid-column: 1/5;
+        font-size: 21px;
+    }
+    .History{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        align-items: center;
+        grid-template-rows: repeat(2, auto);
+    }
+    .HistoryLeft,
+    .HistoryRight{
+        display: grid;
+        grid-template-columns: 0.1fr 1fr;
+    }
+    .HistoryLeft{
+        grid-row: 1/2;
+    }
+    .HistoryRight{
+        grid-row: 2/3;
+    }
+    .Year{
+        font-size: 23px;
+        grid-column: 1/3;
+    }
+    .Month{
+        grid-column: 2/3;
+    }
+
+    /* main-Skill */
+    .SkillSection {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        font-size: 20px;
+    }
+
+    .SkillSection2 {
+        grid-row: 2/3;
+        grid-column: 2/5;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+    }
+
+    .SkillSection2 .SmallBox {
+        height: 90%;
     }
 }
 
@@ -303,7 +411,7 @@
         top: 0;
         left: 0;
         z-index: -1;
-        background-color: #adafe4;
+        background-color: #bdbee6;
         transition: all 0.3s ease;
     }
 
@@ -316,17 +424,14 @@
     /* main-profile */
     .ProfileSection {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 1fr 1fr 0.5fr 0.5fr 1fr;
         grid-template-rows: 1fr 0.5fr 1fr 1fr;
         gap: 0.8em;
     }
 
     .photo {
-        grid-column: 1/4;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 3;
+        grid-column: 1/2;
+        grid-row: 1/3;
     }
 
     .SmallBoxheader span {
@@ -334,63 +439,107 @@
     }
 
     .ProfileTitle {
-        grid-column: 1/4;
-        grid-column-start: 2;
-        grid-column-end: 5;
+        grid-column: 2/6;
+        grid-row: 1/2;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    .ProfileTitle .SmallBox i {
+    .ProfileTitle .SmallBoxMain,
+    .AboutMeTitle .SmallBoxMain {
         font-size: 60px;
     }
 
     .Information {
-        grid-column: 1/4;
-        grid-column-start: 2;
-        grid-column-end: 5;
-        grid-row-start: 2;
-        grid-row-end: 5;
-    }
-
-    .InformationSectionOne,
-    .InformationSectionTwo {
-        height: 100%;
-        text-wrap: nowrap;
-    }
-
-    .InformationSectionOne {
-        float: left;
-    }
-
-    .InformationSectionTwo {
-        float: right;
-        width: 55%;
-    }
-
-    .Favorite,
-    .MyInformation {
+        grid-column: 2/4;
+        grid-row: 2/5;
         font-size: 20px;
     }
-
-    .FavoriteTitle,
-    .name {
-        font-size: 25px;
+    .Information table th{
+        font-size: 25px;;
     }
-
+    .Information .SmallBoxMain{
+        display: flex;
+        flex-direction: column;
+    }
+    .SnsSection{
+        grid-column: 4/6;
+        grid-row: 2/5;
+    }
     .music {
-        grid-column: 1/4;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 3;
-        grid-row-end: 5;
+        grid-column: 1/2;
+        grid-row: 3/5;
     }
-    .audioCustom{
+
+    .audioCustom {
         font-size: 13px;
     }
-    .audioBtn img{
+
+    .audioBtn img {
         width: 15px;
+    }
+
+    /* main-AboutMe */
+    .AboutMeTitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-row: 1/2;
+        grid-column: 1/5;
+    }
+
+    .AboutMeImg {
+        grid-row: 1/3;
+        grid-column: 5/6;
+    }
+
+    /* main-History */
+    .HistorySection {
+        grid-row: 2/5;
+        grid-column: 1/3;
+        font-size: 15px;
+        align-items: center;
+    }
+    .Year, .Skill span{
+        font-size: 20px;
+    }
+    .History{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+    }
+    .HistoryLeft,
+    .HistoryRight{
+        display: grid;
+        grid-template-columns: 0.1fr 1fr;
+    }
+    .HistoryLeft{
+        grid-row: 1/2;
+    }
+    .HistoryRight{
+        grid-row: 2/3;
+    }
+    .Year{
+        grid-column: 1/3;
+    }
+    .Month{
+        grid-column: 2/3;
+    }
+
+    /* main-Skill */
+    .SkillSection {
+        grid-row: 3/5;
+        grid-column: 5/6;
+    }
+
+    .SkillSection2 {
+        grid-row: 2/5;
+        grid-column: 3/5;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
     }
 }
 
@@ -412,7 +561,7 @@
         top: 0;
         left: 0;
         z-index: -1;
-        background-color: #adafe4;
+        background-color: #bdbee6;
         transition: all 0.3s ease;
     }
 
@@ -425,17 +574,14 @@
     /* main-profile */
     .ProfileSection {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 1fr 1fr 0.5fr 0.5fr 1fr;
         grid-template-rows: 1fr 0.5fr 1fr 1fr;
         gap: 0.8em;
     }
 
     .photo {
-        grid-column: 1/4;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row: 1;
-        grid-row-end: 3;
+        grid-column: 1/2;
+        grid-row: 1/3;
     }
 
     .SmallBoxheader span {
@@ -443,63 +589,107 @@
     }
 
     .ProfileTitle {
-        grid-column: 1/4;
-        grid-column-start: 2;
-        grid-column-end: 5;
+        grid-column: 2/6;
+        grid-row: 1/2;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    .ProfileTitle .SmallBoxMain {
+    .ProfileTitle .SmallBoxMain,
+    .AboutMeTitle .SmallBoxMain {
         font-size: 60px;
     }
 
     .Information {
-        grid-column: 1/4;
-        grid-column-start: 2;
-        grid-column-end: 5;
-        grid-row-start: 2;
-        grid-row-end: 5;
-    }
-
-    .InformationSectionOne,
-    .InformationSectionTwo {
-        height: 100%;
-        text-wrap: nowrap;
-    }
-
-    .InformationSectionOne {
-        float: left;
-    }
-
-    .InformationSectionTwo {
-        float: right;
-        width: 55%;
-    }
-
-    .Favorite,
-    .MyInformation {
+        grid-column: 2/4;
+        grid-row: 2/5;
         font-size: 25px;
     }
-
-    .FavoriteTitle,
-    .name {
+    .Information table th{
         font-size: 30px;
     }
-
-    .music {
-        grid-column: 1/4;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row: 3;
-        grid-row-end: 5;
+    .Information .SmallBoxMain{
+        display: flex;
+        flex-direction: column;
     }
-    .audioCustom{
+    .SnsSection{
+        grid-column: 4/6;
+        grid-row: 2/5;
+    }
+    .music {
+        grid-column: 1/2;
+        grid-row: 3/5;
+    }
+
+    .audioCustom {
         font-size: 13px;
     }
-    .audioBtn img{
+
+    .audioBtn img {
         width: 15px;
+    }
+
+    /* main-AboutMe */
+    .AboutMeTitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-row: 1/2;
+        grid-column: 1/5;
+    }
+
+    .AboutMeImg {
+        grid-row: 1/3;
+        grid-column: 5/6;
+    }
+
+    /* main-History */
+    .HistorySection {
+        grid-row: 2/5;
+        grid-column: 1/3;
+        font-size: 22px;
+        align-items: center;
+    }
+    .Year, .Skill span{
+        font-size: 26px;
+    }
+    .History{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+    }
+    .HistoryLeft,
+    .HistoryRight{
+        display: grid;
+        grid-template-columns: 0.1fr 1fr;
+    }
+    .HistoryLeft{
+        grid-row: 1/2;
+    }
+    .HistoryRight{
+        grid-row: 2/3;
+    }
+    .Year{
+        grid-column: 1/3;
+    }
+    .Month{
+        grid-column: 2/3;
+    }
+
+    /* main-Skill */
+    .SkillSection {
+        grid-row: 3/5;
+        grid-column: 5/6;
+    }
+
+    .SkillSection2 {
+        grid-row: 2/5;
+        grid-column: 3/5;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
     }
 }
 
@@ -518,9 +708,8 @@ body {
     scroll-behavior: smooth;
     padding: 0;
     margin: 0;
-    background: linear-gradient(to bottom, #c6c0e4, #d6ddf3, #ffebf0, #F8CDDA, #ddd6f3, #BE93C5);
+    background: linear-gradient(to bottom, #a199cb, #c1ccf0, #ffebf0, #ddd6f3);
 }
-
 
 header,
 footer,
@@ -544,7 +733,28 @@ section {
     align-items: center;
     padding: 1em;
 }
-
+/* font */
+.headerSection,
+.ProfileTitle,
+.AboutMeTitle{
+    font-family: 'Baloo Paaji', cursive;
+}
+.whiteBoxheader,
+.headerSubmit button,
+.SmallBoxheader{
+    font-family: 'MoveSans-Bold';
+}
+.MyInformation table th,
+.Instagram,
+.InstagramText,
+.Skill{
+    font-family: 'MaplestoryOTFBold';
+}
+.MyInformation table td,
+.audioCustom,
+.HistorySection .SmallBoxMain{
+    font-family: 'SUITE-Regular';
+}
 /* 스크롤바 안보이게 */
 ::-webkit-scrollbar {
     display: none;
@@ -564,7 +774,6 @@ section {
     position: relative;
     width: 100%;
     color: white;
-    font-family: 'Baloo Paaji', cursive;
     text-align: center;
     white-space: nowrap;
     /* 텍스트 줄바꿈 방지 */
@@ -655,7 +864,6 @@ section {
     align-items: center;
     padding: 0.5em 1em;
     background: linear-gradient(to right, #dbc5eb, #ccd9f4);
-    font-family: 'MoveSans-Bold';
     width: 100%;
 }
 
@@ -669,7 +877,6 @@ section {
     background-color: transparent;
     color: white;
     cursor: pointer;
-    font-family: 'MoveSans-Bold';
     border-radius: 1.5em;
     color: white;
     font-size: 2vw;
@@ -712,7 +919,6 @@ section {
     align-items: center;
     padding: 0.2em;
     gap: 0.4em;
-    font-family: 'MoveSans-Bold';
     width: 100%;
     border-bottom: 1px solid #000000;
 }
@@ -749,25 +955,29 @@ section {
     padding: 0.3em;
 }
 
-.photo .SmallBoxheader span:nth-child(1) {
+.photo .SmallBoxheader span:nth-child(1),
+.SkillSection .SmallBoxheader span:nth-child(1) {
     color: white;
 }
 
-.photo .SmallBoxheader span:nth-child(2) {
+.photo .SmallBoxheader span:nth-child(2),
+.SkillSection .SmallBoxheader span:nth-child(2) {
     color: rgb(253, 229, 230);
 }
 
-.photo .SmallBoxheader span:nth-child(3) {
+.photo .SmallBoxheader span:nth-child(3),
+.SkillSection .SmallBoxheader span:nth-child(3) {
     color: rgb(212, 253, 207);
 }
 
 /* main-profile, Title */
-.ProfileTitle {
-    font-family: 'Baloo Paaji', cursive;
+.ProfileTitle,
+.AboutMeTitle {
     text-align: center;
 }
 
-.ProfileTitle .SmallBoxheader {
+.ProfileTitle .SmallBoxheader,
+.HistorySection .SmallBoxheader {
     position: relative;
     background-color: #b3c4ec;
     color: white;
@@ -775,7 +985,8 @@ section {
     justify-content: right;
 }
 
-.ProfileTitle .SmallBoxMain {
+.ProfileTitle .SmallBoxMain,
+.AboutMeTitle .SmallBoxMain {
     position: relative;
 }
 
@@ -793,7 +1004,8 @@ section {
     right: 0;
 }
 
-.ProfileTitle .SmallBoxMain i {
+.ProfileTitle .SmallBoxMain i,
+.AboutMeTitle .SmallBoxMain i {
     position: absolute;
     -webkit-text-stroke: 1px black;
     color: transparent;
@@ -802,7 +1014,8 @@ section {
 }
 
 /* main-profile, Information */
-.Information .SmallBoxheader {
+.Information .SmallBoxheader,
+.AboutMeImg .SmallBoxheader {
     background-color: #e9d0d6;
     color: white;
 }
@@ -813,45 +1026,32 @@ section {
     background-position: center;
     background-size: cover;
 }
-
-.MyInformation,
-.MyFavorite,
-.MySns {
+.Information .SmallBoxMain{
+    align-items: start;
+}
+.MyInformation {
     display: flex;
-    padding: 0.5em;
-    font-family: 'SUITE-Regular';
+    width: 100%;
+    padding: 0.5em 0.5em 0em 0.5em;
+}
+.MyInformation table{
+    text-align: left;
+    width: 100%;
 }
 
-.name,
-.FavoriteTitle {
-    font-weight: bold;
-    font-family: 'MaplestoryOTFBold';
-}
-
-.name::before,
-.name::after {
-    content: "💗";
-}
-
-.FavoriteTitle::before {
+.MyInformation table th::before {
     content: "📁";
 }
-
-.Favorite span {
-    margin-left: 0.5em;
-    font-weight: lighter;
+.MyInformation table td{
+    text-wrap: nowrap;
 }
-
-.Favorite span::before {
+.MyInformation table td::before {
     content: "📂";
+    padding-left: 0.8em;
+    padding-right: 0.3em;
 }
-
-.MySns {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+.Favorite table{
+    table-layout: fixed;
 }
 
 .Instagram {
@@ -859,18 +1059,14 @@ section {
     height: 100%;
     text-decoration: none;
     color: black;
-    font-family: 'MaplestoryOTFBold';
-    background-color: white;
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 1fr auto;
     overflow: hidden;
-    border-radius: 0.5em;
-    border: 1px solid black;
 }
 
 .InstagramText {
+    background-color: white;
     padding: 0.5em;
-    font-size: 15px;
     display: flex;
     align-items: center;
 }
@@ -878,11 +1074,14 @@ section {
 .Text-right {
     margin-left: auto;
 }
+.Text-left{
+    margin-right: auto;
+}
 
 .InstagramMain {
     height: 100%;
     width: 100%;
-    background-image: url("images/KakaoTalk_20230610_133225528.jpg");
+    background-image: url("images/photo.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -944,50 +1143,61 @@ section {
 }
 
 /* main-profile, music */
-.music .SmallBoxheader {
+.music .SmallBoxheader,
+.SkillSection .SmallBoxheader {
     background-color: #d5d5f4;
     color: white;
     padding: 0.5em;
 }
-.music .SmallBoxMain{
+
+.music .SmallBoxMain {
     padding: 0.5em;
     gap: 0.3em;
+    background-color: white;
 }
-.audioCustom{
+
+.audioCustom {
     float: right;
     width: 60%;
-    font-family: 'SUITE-Regular';
 }
-.audioImg{
+
+.audioImg {
     float: left;
     width: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.audioImg img{
+
+.audioImg img {
     height: 100%;
     width: 100%;
 }
-#durationTime{
+
+#durationTime {
     float: right;
 }
-.audioBtn, .audioRange{
+
+.audioBtn,
+.audioRange {
     display: flex;
     align-items: center;
 }
-.audioBtn{
+
+.audioBtn {
     width: 100%;
     align-items: center;
     display: grid;
     grid-template-columns: 0.5fr 1fr 0.5fr;
 }
-.audioBtn img{
+
+.audioBtn img {
     grid-column-start: 1;
     grid-column-end: 2;
     justify-self: left;
 }
-.audioBtn button{
+
+.audioBtn button {
     border: none;
     box-shadow: none;
     background-color: transparent;
@@ -995,18 +1205,192 @@ section {
     cursor: pointer;
     transition: 0.3s;
 }
-.audioBtn button:hover{
+
+.audioBtn button:hover {
     filter: invert(0%) sepia(93%) saturate(0%) hue-rotate(284deg) brightness(107%) contrast(107%);
 }
-.audioBtnSet{
+
+.audioBtnSet {
     grid-column-start: 2;
     grid-column-end: 3;
     display: flex;
     justify-self: center;
 }
-#audioVolumn{
+
+#audioVolumn {
     grid-column-start: 3;
     justify-self: right;
+}
+
+/* main-AboutMe */
+/* main-AboutMe, Title */
+.AboutMeTitle .SmallBoxheader {
+    background-color: #dbc5eb;
+    justify-content: left;
+    position: relative;
+    color: white;
+    padding: 0.3em;
+}
+
+.AboutMeTitle .SmallBoxMain i {
+    -webkit-text-stroke: 1px white;
+}
+
+.AboutMeTitle .SmallBoxMain {
+    background-image: url("images/blob-scene-haikei.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* main-AboutMe, History */
+.HistorySection .SmallBoxheader{
+    background-color: #eec5c5;
+}
+.HistorySection .SmallBoxMain{
+    padding: 0.5em;
+    background-image: url("images/stacked-waves-haikei.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.Year{
+    font-weight: bold;
+}
+.Year::before{
+    content: "▼";
+    color: #e6b0b0;
+}
+.Month::before{
+    content: "📂";
+}
+/* main-AboutMe, SkillSection */
+.SkillSection .SmallBoxheader{
+    justify-content: right;
+}
+.SkillSection .SmallBoxMain{
+    justify-content: left;
+    text-align: left;
+    padding: 0.5em;
+    background-image: url("images/SimpleShiny.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.Skill{
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    color: white;
+    text-shadow: 2px 2px rgb(188, 204, 255);
+}
+.SkillGraphe{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 0.1fr 1fr;
+}
+.java, .c, .python, .db, .cs6{
+    grid-column: 3/4;
+    align-self: center;
+    display: block;
+    height: 30%;
+    background: linear-gradient(to right, #bdc5ff, #d6e4ff);
+    -webkit-border-radius: 15px;
+}
+.java{
+    width: 95%;
+}
+.c{
+    width: 89%;
+}
+.python{
+    width: 93%;
+}
+.db{
+    width: 90%;
+}
+.cs6{
+    width: 92%;
+}
+/* main-AboutMe, SkillSection2 */
+.Git .SmallBoxheader,
+.Tistory .SmallBoxheader,
+.BaekJoon .SmallBoxheader{
+    color: white;
+}
+.Git .SmallBoxMain,
+.Tistory .SmallBoxMain,
+.BaekJoon .SmallBoxMain{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.5s ease;
+}
+.Git .SmallBoxheader{
+    background-color: #bcdfba;
+}
+.Git .SmallBoxMain{
+    background-image: url("images/github.png");
+}
+.Tistory .SmallBoxheader{
+    background-color: rgb(232, 175, 175);
+}
+.Tistory .SmallBoxMain{
+    background-image: url("images/티스토리.png");
+}
+.BaekJoon .SmallBoxheader{
+    background-color: rgb(139, 186, 225);
+}
+.BaekJoon .SmallBoxMain{
+    background-image: url("images/백준.png");
+}
+.Git .SmallBoxMain::before,
+.Tistory .SmallBoxMain::before,
+.BaekJoon .SmallBoxMain::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.497);
+    transition: all 0.5s ease;
+}
+.Git .SmallBoxMain::after,
+.Tistory .SmallBoxMain::after,
+.BaekJoon .SmallBoxMain::after{
+    content: 'Click';
+    font-family: 'MaplestoryOTFBold';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+.Git .SmallBoxMain:hover::before,
+.Tistory .SmallBoxMain:hover::before,
+.BaekJoon .SmallBoxMain:hover::before{
+    opacity: 1;
+}
+.Git .SmallBoxMain:hover::after,
+.Tistory .SmallBoxMain:hover::after,
+.BaekJoon .SmallBoxMain:hover::after{
+    opacity: 1;
+    animation: bounce 0.8s infinite;
+}
+@keyframes bounce {
+    0%, 100%{
+        top: 0;
+    }
+    50%{
+        top: -10%;
+    }
 }
 /* 부드러운 스크롤 */
 .fade-wrap {
@@ -1022,13 +1406,18 @@ section {
 }
 
 /* input:range 커스텀 */
-input[type='range']{
-    -webkit-appearance: none; /* 기본 CSS 스타일을 적용하지 않기 위해서 */
-    width: 100%; /* 슬라이더 길이 */
-    height: 7px; /* 슬라이더 두께 */
-    border-radius: 5px; /* 슬라이더 모서리를 약간 둥글게 */
+input[type='range'] {
+    -webkit-appearance: none;
+    /* 기본 CSS 스타일을 적용하지 않기 위해서 */
+    width: 100%;
+    /* 슬라이더 길이 */
+    height: 7px;
+    /* 슬라이더 두께 */
+    border-radius: 5px;
+    /* 슬라이더 모서리를 약간 둥글게 */
     background: linear-gradient(to right, #d5d5f4, #e9d0d6);
-    outline: none; /* 슬라이더 테두리 없이 */
+    outline: none;
+    /* 슬라이더 테두리 없이 */
 }
 
 /* 슬라이더 핸들(클릭해서 드래그하는 부분) 커스텀  */
@@ -1040,13 +1429,16 @@ input[type='range']::-webkit-slider-thumb {
     border-radius: 50%;
     background: rgb(230, 230, 255);
     border: 1px solid rgb(189, 189, 239);
-    cursor: pointer; /* 슬라이더 핸들에 마우스를 갖다대면 포인터로 변경 */
+    cursor: pointer;
+    /* 슬라이더 핸들에 마우스를 갖다대면 포인터로 변경 */
 }
+
 input[type='range']::-moz-range-thumb {
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background: rgb(230, 230, 255); 
+    background: rgb(230, 230, 255);
     border: 1px solid rgb(189, 189, 239);
-    cursor: pointer; /* 슬라이더 핸들에 마우스를 갖다대면 포인터로 변경 */
+    cursor: pointer;
+    /* 슬라이더 핸들에 마우스를 갖다대면 포인터로 변경 */
 }
