@@ -8,688 +8,235 @@
 }
 
 @font-face {
-    font-family: 'SUITE-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
-    font-weight: 400;
+    font-family: 'HakgyoansimWoojuR';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2') format('woff2');
+    font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'MaplestoryOTFBold';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff') format('woff');
+    font-family: 'LOTTERIACHAB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 /* 세로모드 모바일 디바이스 (가로 해상도가 576px 보다 작은 화면에 적용) */
 @media (max-width: 575px) {
-    .SmallBoxheader span {
+    section .Boxheader{
         font-size: 10px;
     }
-
-    /* main-Profile */
-    .ProfileSection {
-        display: grid;
+    .Boxheader img{
+        width: 12px;
+    }
+    .BoxSection {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr 1fr 0.5fr 1fr;
-        gap: 0.5em;
+        grid-template-rows: 0.8fr 0.2fr 1fr 0.2fr 0.8fr 1fr;
     }
-
-    .photo {
-        grid-column: 1/2;
-        grid-row: 1/2;
-    }
-
-    .ProfileTitle {
-        grid-column: 2/3;
-        grid-row: 1/2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .ProfileTitle .SmallBox,
-    .AboutMeTitle .SmallBox {
-        height: 80%;
-    }
-
-    .ProfileTitle .SmallBox i,
-    .AboutMeTitle .SmallBox i {
-        font-size: 28px;
-    }
-
-    .Information {
-        grid-column: 1/3;
-        grid-row: 2/4;
-        font-size: 17px;
-    }
-    .MyInformation table th {
-        font-size: 20px;
-    }
-    .Information .SmallBoxMain{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .SnsSection,
-    .AboutMeImg {
+    /* none */
+    .ProfileSNS {
         display: none;
     }
 
-    .music {
+    /* main-Profile */
+    /* main-Profile, Title */
+    .SectionTitle {
         grid-column: 1/3;
-        grid-row: 4/5;
-    }
-
-    .audioCustom {
-        font-size: 10px;
-    }
-
-    .audioBtn img {
-        width: 15px;
-    }
-
-    /* main-AboutMe */
-    .AboutMeTitle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         grid-row: 1/2;
+    }
+    .TitleMain{
+        font-size: 40px;
+    }
+
+    .ProfilePhoto {
         grid-column: 1/2;
+        grid-row: 3/4;
     }
 
-    /* main-History */
-    .HistorySection {
-        grid-row: 3/5;
-        grid-column: 1/3;
-        font-size: 15px;
-    }
-    .Year, .Skill span{
-        font-size: 18px;
-    }
-    .History{
-        display: grid;
-        width: 100%;
-        height: 100%;
-        grid-template-rows: repeat(2, auto);
-    }
-    .HistoryLeft{
-        grid-row: 1/2;
-    }
-    .HistoryRight{
-        grid-row: 2/3;
-    }
-    .HistoryLeft, .HistoryRight{
-        display: grid;
-        grid-template-columns: 0.1fr 1fr;
-    }
-    .Year{
-        grid-column: 1/3;
-    }
-    .Month{
+    .ProfileMusic {
         grid-column: 2/3;
-    }
-    /* main-Skill */
-    .SkillSection {
-        grid-row: 1/2;
-        grid-column: 2/3;
+        grid-row: 2/5;
     }
 
-    .SkillSection2 {
-        grid-row: 2/3;
+    .ProfileInformation {
         grid-column: 1/3;
-        display: flex;
-        gap: 0.5em;
+        grid-row: 5/7;
     }
 }
 
 /* 가로모드 모바일 디바이스 (가로 해상도가 576px보다 크고 768px 보다 작은 화면에 적용)  */
 @media (min-width: 576px) and (max-width: 767px) {
-    .ProfileSection {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 0.5em;
+    section .Boxheader{
+        font-size: 8px;
+    }
+    .Boxheader img{
+        width: 10px;
+    }
+    .BoxSection {
+        grid-template-columns: 1fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr 1fr;
+        grid-template-rows: 0.1fr 0.8fr 0.1fr 0.5fr 0.5fr 1fr;
     }
 
-    .photo {
-        grid-column: 1/2;
-        grid-row: 1/2;
-    }
-
-    .SmallBoxheader span {
-        font-size: 10px;
-    }
-
-    .ProfileTitle {
-        grid-column: 2/5;
-        grid-row: 1/2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .ProfileTitle .SmallBox,
-    .AboutMeTitle .SmallBox {
-        height: 90%;
-    }
-
-    .ProfileTitle .SmallBoxMain,
-    .AboutMeTitle .SmallBoxMain {
-        font-size: 50px;
-    }
-
-    .Information {
-        grid-column: 2/5;
-        grid-row: 2/3;
-        font-size: 13px;
-    }
-    .Information table th{
-        font-size: 15px;
-    }
-
-    .SnsSection, .AboutMeImg {
+    /* none */
+    .ProfileSNS {
         display: none;
     }
 
-    .music {
-        grid-column: 1/2;
-        grid-row: 2/3;
-    }
-
-    .durationSpan, .audioCustom {
-        font-size: 10px;
-    }
-    .audioBtn img {
-        width: 10px;
-    }
-
-    /* main-AboutMe */
-    .AboutMeTitle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        grid-row: 1/2;
+    /* main-Profile */
+    /* main-Profile, Title */
+    .SectionTitle {
         grid-column: 1/4;
-    }
-
-    /* main-History */
-    .HistorySection {
         grid-row: 2/3;
-        grid-column: 1/3;
-        font-size: 10px;
     }
-    .History{
-        display: grid;
-        width: 100%;
-        height: 100%;
-        grid-template-columns: repeat(2, auto);
-        text-wrap: nowrap;
-    }
-    .HistoryLeft,
-    .HistoryRight{
-        display: grid;
-        grid-template-columns: 0.1fr 1fr;
-        grid-template-rows: repeat(8, 1fr);
-    }
-    .HistoryLeft{
-        grid-column: 1/2;
-    }
-    .HistoryRight{
-        grid-column: 2/3;
-    }
-    .Year{
-        grid-column: 1/3;
-        font-size: 12px;
-    }
-    .Month{
-        grid-column: 2/3;
+    .TitleMain{
+        font-size: 20px;
     }
 
-    /* main-Skill */
-    .SkillSection {
-        grid-row: 1/2;
-        grid-column: 4/5;
-        font-size: 10px;
+    .ProfilePhoto {
+        grid-column: 4/6;
+        grid-row: 1/4;
     }
 
-    .SkillSection2 {
-        grid-row: 2/3;
-        grid-column: 3/5;
-        display: flex;
-        gap: 0.5em;
+    .ProfileMusic {
+        grid-column: 6/8;
+        grid-row: 1/7;
+    }
+
+    .ProfileInformation {
+        grid-column: 1/6;
+        grid-row: 4/7;
     }
 }
 
 /*태블릿 디바이스 (가로 해상도가 768px보다 크고 991px 보다 작은 화면에 적용)  */
 @media (min-width: 768px) and (max-width: 991px) {
-    .ProfileSection {
-        display: grid;
-        grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
-        grid-template-rows: 2fr 2fr 1fr 2fr;
-        gap: 0.5em;
-    }
-
-    .photo {
-        grid-column: 1/2;
-        grid-row: 1/2;
-    }
-
-    .SmallBoxheader span {
+    section .Boxheader{
         font-size: 11px;
     }
+    .Boxheader img{
+        width: 13px;
+    }
 
-    .ProfileTitle {
-        grid-column: 2/5;
+    .BoxSection {
+        grid-template-columns: 1fr 0.25fr 0.25fr 0.5fr 1fr;
+        grid-template-rows: 1fr 1fr 0.5fr 0.5fr 1fr;
+    }
+
+    /* main-Profile */
+    /* main-Profile, Title */
+    .SectionTitle {
+        grid-column: 1/6;
         grid-row: 1/2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
-
-    .ProfileTitle .SmallBox,
-    .AboutMeTitle .SmallBox {
-        height: 60%;
+    .TitleMain{
+        font-size: 80px;
     }
-
-    .ProfileTitle .SmallBoxMain,
-    .AboutMeTitle .SmallBoxMain {
-        font-size: 55px;
-    }
-
-    .Information {
+    .ProfilePhoto {
         grid-column: 1/3;
-        grid-row: 2/4;
-        font-size: 20px;
+        grid-row: 2/3;
     }
-    .Information table th{
-        font-size: 25px;
+
+    .ProfileMusic {
+        grid-column: 1/3;
+        grid-row: 3/6;
     }
-    .Information .SmallBoxMain{
-        display: flex;
-        flex-direction: column;
-    }
-    .SnsSection{
-        grid-column: 3/5;
+
+    .ProfileInformation {
+        grid-column: 3/6;
         grid-row: 2/4;
     }
 
-    .music {
-        grid-column: 1/5;
-        grid-row: 4/5;
-    }
-
-    .audioCustom {
-        font-size: 18px;
-    }
-
-    .audioBtn img {
-        width: 35px;
-    }
-
-    /* main-AboutMe */
-    .AboutMeTitle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        grid-row: 1/2;
-        grid-column: 1/4;
-    }
-
-    .AboutMeImg {
-        grid-row: 1/2;
-        grid-column: 4/5;
-    }
-
-    /* main-History */
-    .HistorySection {
-        grid-row: 3/5;
-        grid-column: 1/5;
-        font-size: 21px;
-    }
-    .History{
-        width: 100%;
-        height: 100%;
-        display: grid;
-        align-items: center;
-        grid-template-rows: repeat(2, auto);
-    }
-    .HistoryLeft,
-    .HistoryRight{
-        display: grid;
-        grid-template-columns: 0.1fr 1fr;
-    }
-    .HistoryLeft{
-        grid-row: 1/2;
-    }
-    .HistoryRight{
-        grid-row: 2/3;
-    }
-    .Year{
-        font-size: 23px;
-        grid-column: 1/3;
-    }
-    .Month{
-        grid-column: 2/3;
-    }
-
-    /* main-Skill */
-    .SkillSection {
-        grid-row: 2/3;
-        grid-column: 1/2;
-        font-size: 20px;
-    }
-
-    .SkillSection2 {
-        grid-row: 2/3;
-        grid-column: 2/5;
-        display: flex;
-        align-items: center;
-        gap: 0.5em;
-    }
-
-    .SkillSection2 .SmallBox {
-        height: 90%;
+    .ProfileSNS {
+        grid-column: 3/6;
+        grid-row: 4/6;
     }
 }
 
 /* 데스크탑 (가로 해상도가 992px보다 크고 1199px 보다 작은 화면에 적용)  */
 @media (min-width: 992px) and (max-width: 1199px) {
-
-    /* main-whiteBox header Btn Hover */
-    .headerSubmit button {
-        transition: all 0.3s ease;
-        overflow: hidden;
-        z-index: 1;
-    }
-
-    .headerSubmit button:not(:disabled)::after {
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 0;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        background-color: #bdbee6;
-        transition: all 0.3s ease;
-    }
-
-    .headerSubmit button:hover::after {
-        top: auto;
-        bottom: 0;
-        height: 100%;
-    }
-
-    /* main-profile */
-    .ProfileSection {
-        display: grid;
-        grid-template-columns: 1fr 1fr 0.5fr 0.5fr 1fr;
-        grid-template-rows: 1fr 0.5fr 1fr 1fr;
-        gap: 0.8em;
-    }
-
-    .photo {
-        grid-column: 1/2;
-        grid-row: 1/3;
-    }
-
-    .SmallBoxheader span {
+    section .Boxheader{
         font-size: 12px;
     }
+    .Boxheader img{
+        width: 14px;
+    }
+    .BoxSection {
+        grid-template-columns: 1fr 1fr 0.5fr 0.5fr 1fr;
+        grid-template-rows: 0.8fr 0.2fr 1fr;
+    }
 
-    .ProfileTitle {
+    /* main-Profile */
+    /* main-Profile, Title */
+    .SectionTitle {
         grid-column: 2/6;
         grid-row: 1/2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    }
+    .TitleMain{
+        font-size: 80px;
     }
 
-    .ProfileTitle .SmallBoxMain,
-    .AboutMeTitle .SmallBoxMain {
-        font-size: 60px;
-    }
-
-    .Information {
-        grid-column: 2/4;
-        grid-row: 2/5;
-        font-size: 20px;
-    }
-    .Information table th{
-        font-size: 25px;;
-    }
-    .Information .SmallBoxMain{
-        display: flex;
-        flex-direction: column;
-    }
-    .SnsSection{
-        grid-column: 4/6;
-        grid-row: 2/5;
-    }
-    .music {
+    .ProfilePhoto {
         grid-column: 1/2;
-        grid-row: 3/5;
-    }
-
-    .audioCustom {
-        font-size: 13px;
-    }
-
-    .audioBtn img {
-        width: 15px;
-    }
-
-    /* main-AboutMe */
-    .AboutMeTitle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        grid-row: 1/2;
-        grid-column: 1/5;
-    }
-
-    .AboutMeImg {
-        grid-row: 1/3;
-        grid-column: 5/6;
-    }
-
-    /* main-History */
-    .HistorySection {
-        grid-row: 2/5;
-        grid-column: 1/3;
-        font-size: 15px;
-        align-items: center;
-    }
-    .Year, .Skill span{
-        font-size: 20px;
-    }
-    .History{
-        width: 100%;
-        height: 100%;
-        display: grid;
-        grid-template-rows: repeat(2, auto);
-    }
-    .HistoryLeft,
-    .HistoryRight{
-        display: grid;
-        grid-template-columns: 0.1fr 1fr;
-    }
-    .HistoryLeft{
         grid-row: 1/2;
     }
-    .HistoryRight{
-        grid-row: 2/3;
-    }
-    .Year{
-        grid-column: 1/3;
-    }
-    .Month{
-        grid-column: 2/3;
+
+    .ProfileMusic {
+        grid-column: 1/2;
+        grid-row: 2/4;
     }
 
-    /* main-Skill */
-    .SkillSection {
-        grid-row: 3/5;
-        grid-column: 5/6;
+    .ProfileInformation {
+        grid-column: 2/4;
+        grid-row: 2/4;
     }
 
-    .SkillSection2 {
-        grid-row: 2/5;
-        grid-column: 3/5;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5em;
+    .ProfileSNS {
+        grid-column: 4/6;
+        grid-row: 2/4;
     }
 }
 
 /* 큰화면 데스크탑 (가로 해상도가 1200px 보다 큰 화면에 적용)  */
 @media (min-width: 1200px) {
-
-    /* main-whiteBox header Btn Hover */
-    .headerSubmit button {
-        transition: all 0.3s ease;
-        overflow: hidden;
-        z-index: 1;
-    }
-
-    .headerSubmit button:not(:disabled)::after {
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 0;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        background-color: #bdbee6;
-        transition: all 0.3s ease;
-    }
-
-    .headerSubmit button:hover::after {
-        top: auto;
-        bottom: 0;
-        height: 100%;
-    }
-
-    /* main-profile */
-    .ProfileSection {
-        display: grid;
-        grid-template-columns: 1fr 1fr 0.5fr 0.5fr 1fr;
-        grid-template-rows: 1fr 0.5fr 1fr 1fr;
-        gap: 0.8em;
-    }
-
-    .photo {
-        grid-column: 1/2;
-        grid-row: 1/3;
-    }
-
-    .SmallBoxheader span {
+    section .Boxheader{
         font-size: 12px;
     }
+    .Boxheader img{
+        width: 14px;
+    }
+    .BoxSection {
+        grid-template-columns: 1fr 1fr 0.5fr 0.5fr 1fr;
+        grid-template-rows: 0.8fr 0.2fr 1fr;
+    }
 
-    .ProfileTitle {
+    /* main-Profile */
+    /* main-Profile, Title */
+    .SectionTitle {
         grid-column: 2/6;
         grid-row: 1/2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    }
+    .TitleMain{
+        font-size: 90px;
     }
 
-    .ProfileTitle .SmallBoxMain,
-    .AboutMeTitle .SmallBoxMain {
-        font-size: 60px;
-    }
-
-    .Information {
-        grid-column: 2/4;
-        grid-row: 2/5;
-        font-size: 25px;
-    }
-    .Information table th{
-        font-size: 30px;
-    }
-    .Information .SmallBoxMain{
-        display: flex;
-        flex-direction: column;
-    }
-    .SnsSection{
-        grid-column: 4/6;
-        grid-row: 2/5;
-    }
-    .music {
+    .ProfilePhoto {
         grid-column: 1/2;
-        grid-row: 3/5;
-    }
-
-    .audioCustom {
-        font-size: 13px;
-    }
-
-    .audioBtn img {
-        width: 15px;
-    }
-
-    /* main-AboutMe */
-    .AboutMeTitle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        grid-row: 1/2;
-        grid-column: 1/5;
-    }
-
-    .AboutMeImg {
-        grid-row: 1/3;
-        grid-column: 5/6;
-    }
-
-    /* main-History */
-    .HistorySection {
-        grid-row: 2/5;
-        grid-column: 1/3;
-        font-size: 22px;
-        align-items: center;
-    }
-    .Year, .Skill span{
-        font-size: 26px;
-    }
-    .History{
-        width: 100%;
-        height: 100%;
-        display: grid;
-        grid-template-rows: repeat(2, auto);
-    }
-    .HistoryLeft,
-    .HistoryRight{
-        display: grid;
-        grid-template-columns: 0.1fr 1fr;
-    }
-    .HistoryLeft{
         grid-row: 1/2;
     }
-    .HistoryRight{
-        grid-row: 2/3;
-    }
-    .Year{
-        grid-column: 1/3;
-    }
-    .Month{
-        grid-column: 2/3;
+
+    .ProfileMusic {
+        grid-column: 1/2;
+        grid-row: 2/4;
     }
 
-    /* main-Skill */
-    .SkillSection {
-        grid-row: 3/5;
-        grid-column: 5/6;
+    .ProfileInformation {
+        grid-column: 2/4;
+        grid-row: 2/4;
     }
 
-    .SkillSection2 {
-        grid-row: 2/5;
-        grid-column: 3/5;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5em;
+    .ProfileSNS {
+        grid-column: 4/6;
+        grid-row: 2/4;
     }
 }
 
@@ -708,7 +255,7 @@ body {
     scroll-behavior: smooth;
     padding: 0;
     margin: 0;
-    background: linear-gradient(to bottom, #a199cb, #c1ccf0, #ffebf0, #ddd6f3);
+    background: linear-gradient(to bottom, #dae2f8, #d6a4a4);
 }
 
 header,
@@ -716,10 +263,6 @@ footer,
 section {
     height: 100vh;
     overflow: hidden;
-}
-
-header,
-section {
     display: flex;
     justify-content: center;
 }
@@ -731,33 +274,43 @@ header {
 
 section {
     align-items: center;
-    padding: 1em;
+    padding: 2em;
 }
-/* font */
-.headerSection,
-.ProfileTitle,
-.AboutMeTitle{
-    font-family: 'Baloo Paaji', cursive;
-}
-.whiteBoxheader,
-.headerSubmit button,
-.SmallBoxheader{
-    font-family: 'MoveSans-Bold';
-}
-.MyInformation table th,
-.Instagram,
-.InstagramText,
-.Skill{
-    font-family: 'MaplestoryOTFBold';
-}
-.MyInformation table td,
-.audioCustom,
-.HistorySection .SmallBoxMain{
-    font-family: 'SUITE-Regular';
-}
+
 /* 스크롤바 안보이게 */
 ::-webkit-scrollbar {
     display: none;
+}
+
+/* 부드러운 스크롤 */
+.fade-wrap {
+    transition: 2s;
+    opacity: 0;
+    position: relative;
+    left: -30%;
+}
+
+.fade-wrap.fade-in {
+    opacity: 1;
+    left: 0;
+}
+
+/* font */
+.BalooPaaji{
+    font-family: 'Baloo Paaji';
+}
+.MovSansBold{
+    font-family: 'MoveSans-Bold';
+}
+.Lotteria{
+    font-family: 'LOTTERIACHAB';
+}
+/* left, right */
+.TextLeft{
+    margin-right: auto;
+}
+.TestRight{
+    margin-left: auto;
 }
 
 /* header */
@@ -774,19 +327,18 @@ section {
     position: relative;
     width: 100%;
     color: white;
-    text-align: center;
     white-space: nowrap;
     /* 텍스트 줄바꿈 방지 */
 }
 
 .title {
     font-size: 15vw;
-    margin-top: -0.5em;
+    margin-top: 5vw;
 }
 
 .titleName {
     font-size: 7vw;
-    margin-top: -1em;
+    margin-top: -9vw;
 }
 
 .titleName span {
@@ -842,603 +394,138 @@ section {
         opacity: 1;
     }
 }
-
-/* main */
-.whiteBox {
-    background-color: rgba(255, 255, 255, 0.519);
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    border-radius: 1em;
+/* gap */
+.gap{
+    gap: 0.5em;
+}
+/* main-Box */
+.Box {
     display: grid;
     grid-template-rows: auto 1fr;
+    background-color: rgba(255, 255, 255, 0.74);
+    border: 1px solid rgb(99, 99, 99);
+    border-radius: 0.5em;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-.whiteBoxMain {
+.Boxheader {
+    width: 100%;
+    padding: 0.5em;
+    border-bottom: 1px solid rgb(99, 99, 99);
+    color: white;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.BoxMain {
     padding: 1em;
     overflow: hidden;
 }
 
-.whiteBoxheader {
-    display: flex;
-    align-items: center;
-    padding: 0.5em 1em;
-    background: linear-gradient(to right, #dbc5eb, #ccd9f4);
+/* main-BoxHeader Color */
+.MainBoxHeader {
+    background-color: #C4C4E0;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    font-size: 1.5vw;
+}
+.HeaderTitle{
     width: 100%;
+    padding: 0.2em;
+    background-color: rgba(255, 255, 255, 0.619);
+    border-radius: 1.5em;
+    color: #9292b7;
+}
+.GreenHeader{
+    background-color: #84B99B;
+}
+.BlueHeader{
+    background-color: #9CABCF;
+}
+.PinkHeader{
+    background-color: #FCDADF;
+}
+.DarkPinkHeader{
+    background-color: #D99EA9;
+}
+.PurpleHeader{
+    background-color: #B1A6C5;
 }
 
-.headerSubmit {
-    margin-left: auto;
-}
-
+/* main-BoxHeader btn */
 .headerSubmit button {
-    position: relative;
-    outline: none;
-    background-color: transparent;
     color: white;
+    font-size: 1.5vw;
+    background-color: transparent;
     cursor: pointer;
     border-radius: 1.5em;
-    color: white;
-    font-size: 2vw;
-    margin-right: 0.5em;
-    border: 1px solid #c0c2e4;
-    padding: 0.3em;
-    box-shadow: 1px 1px 1px #c0c2e4;
+    border: 1px solid #aeaeda;
+    padding: 0.5em;
+    transition: 0.3s ease-in-out;
+    box-shadow: 1px 1px 1px #aeaeda;
 }
 
-.headerSubmit button:nth-last-child(1) {
-    margin-right: 0;
+.headerSubmit button:hover {
+    box-shadow: none;
 }
 
 .headerSubmit button:disabled,
 .headerSubmit button:disabled:hover {
-    box-shadow: inset 1px 1px 1px #c0c2e4;
+    box-shadow: inset 1px 1px 1px #aeaeda;
     cursor: default;
 }
 
-.whiteBoxheaderTitle {
-    font-size: 3vw;
-    color: white;
-}
-
-/* smallBox */
-.SmallBox {
-    background-color: rgba(255, 255, 255, 0.27);
-    overflow: hidden;
-    border-radius: 0.5em;
+/* main-Section */
+.BoxSection {
     display: grid;
-    grid-template-rows: auto 1fr;
-    border: 1px solid #000000;
-    width: 100%;
-    height: 100%;
+    gap: 0.5em;
 }
 
-.SmallBoxheader {
-    grid-row-start: 1;
-    display: flex;
-    align-items: center;
-    padding: 0.2em;
-    gap: 0.4em;
-    width: 100%;
-    border-bottom: 1px solid #000000;
-}
-
-.SmallBoxMain {
-    grid-row-start: 2;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* main-profile */
-.ProfileTitle,
-.photo,
-.Information {
-    overflow: hidden;
-    border-radius: 0.5em;
-}
-
-/* main-profile, photo */
-.photo {
-    background-image: url("images/KakaoTalk_20230610_133225528.jpg");
-    background-repeat: no-repeat;
+/* main-Profile */
+/* main-Profile, Title */
+.SectionTitle .Box{
+    background-image: url("images/Cloudy.svg");
     background-size: cover;
-    background-position: center;
-}
-
-.photo .SmallBoxheader,
-.Information .SmallBoxheader {
-    background-color: #d6c3e3;
-    text-align: left;
-    padding: 0.3em;
-}
-
-.photo .SmallBoxheader span:nth-child(1),
-.SkillSection .SmallBoxheader span:nth-child(1) {
-    color: white;
-}
-
-.photo .SmallBoxheader span:nth-child(2),
-.SkillSection .SmallBoxheader span:nth-child(2) {
-    color: rgb(253, 229, 230);
-}
-
-.photo .SmallBoxheader span:nth-child(3),
-.SkillSection .SmallBoxheader span:nth-child(3) {
-    color: rgb(212, 253, 207);
-}
-
-/* main-profile, Title */
-.ProfileTitle,
-.AboutMeTitle {
-    text-align: center;
-}
-
-.ProfileTitle .SmallBoxheader,
-.HistorySection .SmallBoxheader {
-    position: relative;
-    background-color: #b3c4ec;
-    color: white;
-    padding: 0.3em;
-    justify-content: right;
-}
-
-.ProfileTitle .SmallBoxMain,
-.AboutMeTitle .SmallBoxMain {
-    position: relative;
-}
-
-.ProfileTitle .SmallBoxMain::before {
-    content: "";
-    position: absolute;
-    background-image: url("images/pattern_cross.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto;
-    opacity: 0.1;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-.ProfileTitle .SmallBoxMain i,
-.AboutMeTitle .SmallBoxMain i {
-    position: absolute;
-    -webkit-text-stroke: 1px black;
-    color: transparent;
-    text-shadow: 2px 2px 0px #e3d5ec,
-        5px 5px 0px #caaede;
-}
-
-/* main-profile, Information */
-.Information .SmallBoxheader,
-.AboutMeImg .SmallBoxheader {
-    background-color: #e9d0d6;
-    color: white;
-}
-
-.Information .SmallBox {
-    background-image: url("images/blob-scene.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.Information .SmallBoxMain{
-    align-items: start;
-}
-.MyInformation {
-    display: flex;
-    width: 100%;
-    padding: 0.5em 0.5em 0em 0.5em;
-}
-.MyInformation table{
-    text-align: left;
-    width: 100%;
-}
-
-.MyInformation table th::before {
-    content: "📁";
-}
-.MyInformation table td{
-    text-wrap: nowrap;
-}
-.MyInformation table td::before {
-    content: "📂";
-    padding-left: 0.8em;
-    padding-right: 0.3em;
-}
-.Favorite table{
-    table-layout: fixed;
-}
-
-.Instagram {
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    color: black;
-    display: grid;
-    grid-template-rows: 1fr auto;
-    overflow: hidden;
-}
-
-.InstagramText {
-    background-color: white;
-    padding: 0.5em;
-    display: flex;
-    align-items: center;
-}
-
-.Text-right {
-    margin-left: auto;
-}
-.Text-left{
-    margin-right: auto;
-}
-
-.InstagramMain {
-    height: 100%;
-    width: 100%;
-    background-image: url("images/photo.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-
-    position: relative;
-}
-
-.InstagramMain::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    background-color: rgba(255, 255, 255, 0.395);
-    z-index: 1;
-    opacity: 0;
-    transition: all 0.5s ease;
-}
-
-.InstagramMain span {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: all 0.5s ease;
-    z-index: 2;
-}
-
-.InstagramMain img {
-    width: 150px;
-}
-
-.InstagramMain:hover span {
-    opacity: 1;
-    transition-delay: 0.1s;
-    animation: reveal 1s ease;
-}
-
-.InstagramMain:hover::before {
-    opacity: 1;
-}
-
-@keyframes reveal {
-    0% {
-        transform: translateY(20%);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-/* main-profile, music */
-.music .SmallBoxheader,
-.SkillSection .SmallBoxheader {
-    background-color: #d5d5f4;
-    color: white;
-    padding: 0.5em;
-}
-
-.music .SmallBoxMain {
-    padding: 0.5em;
-    gap: 0.3em;
-    background-color: white;
-}
-
-.audioCustom {
-    float: right;
-    width: 60%;
-}
-
-.audioImg {
-    float: left;
-    width: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.audioImg img {
-    height: 100%;
-    width: 100%;
-}
-
-#durationTime {
-    float: right;
-}
-
-.audioBtn,
-.audioRange {
-    display: flex;
-    align-items: center;
-}
-
-.audioBtn {
-    width: 100%;
-    align-items: center;
-    display: grid;
-    grid-template-columns: 0.5fr 1fr 0.5fr;
-}
-
-.audioBtn img {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    justify-self: left;
-}
-
-.audioBtn button {
-    border: none;
-    box-shadow: none;
-    background-color: transparent;
-    padding: 0;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.audioBtn button:hover {
-    filter: invert(0%) sepia(93%) saturate(0%) hue-rotate(284deg) brightness(107%) contrast(107%);
-}
-
-.audioBtnSet {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    display: flex;
-    justify-self: center;
-}
-
-#audioVolumn {
-    grid-column-start: 3;
-    justify-self: right;
-}
-
-/* main-AboutMe */
-/* main-AboutMe, Title */
-.AboutMeTitle .SmallBoxheader {
-    background-color: #dbc5eb;
-    justify-content: left;
-    position: relative;
-    color: white;
-    padding: 0.3em;
-}
-
-.AboutMeTitle .SmallBoxMain i {
-    -webkit-text-stroke: 1px white;
-}
-
-.AboutMeTitle .SmallBoxMain {
-    background-image: url("images/blob-scene-haikei.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-/* main-AboutMe, History */
-.HistorySection .SmallBoxheader{
-    background-color: #eec5c5;
-}
-.HistorySection .SmallBoxMain{
-    padding: 0.5em;
-    background-image: url("images/stacked-waves-haikei.svg");
-    background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
 }
-.Year{
-    font-weight: bold;
+.SectionTitle .Boxheader span:nth-child(1){
+    color: #ffe4ee;
 }
-.Year::before{
-    content: "▼";
-    color: #e6b0b0;
+.SectionTitle .Boxheader span:nth-child(2){
+    color : #cdffdf;
 }
-.Month::before{
-    content: "📂";
+.SectionTitle .Boxheader span:nth-child(3){
+    color: #c0e1ff;
 }
-/* main-AboutMe, SkillSection */
-.SkillSection .SmallBoxheader{
-    justify-content: right;
-}
-.SkillSection .SmallBoxMain{
-    justify-content: left;
-    text-align: left;
-    padding: 0.5em;
-    background-image: url("images/SimpleShiny.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.Skill{
-    width: 100%;
-    height: 100%;
-    align-content: center;
-    color: white;
-    text-shadow: 2px 2px rgb(188, 204, 255);
-}
-.SkillGraphe{
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto 0.1fr 1fr;
-}
-.java, .c, .python, .db, .cs6{
-    grid-column: 3/4;
+.SectionTitle .BoxMain{
     align-self: center;
-    display: block;
-    height: 30%;
-    background: linear-gradient(to right, #bdc5ff, #d6e4ff);
-    -webkit-border-radius: 15px;
 }
-.java{
-    width: 95%;
-}
-.c{
-    width: 89%;
-}
-.python{
-    width: 93%;
-}
-.db{
-    width: 90%;
-}
-.cs6{
-    width: 92%;
-}
-/* main-AboutMe, SkillSection2 */
-.Git .SmallBoxheader,
-.Tistory .SmallBoxheader,
-.BaekJoon .SmallBoxheader{
+.TitleMain{
+    text-align: center;
     color: white;
+    -webkit-text-stroke: 1px black;
+    font-style: italic;
 }
-.Git .SmallBoxMain,
-.Tistory .SmallBoxMain,
-.BaekJoon .SmallBoxMain{
-    background-size: contain;
+/* main-Profile, Photo */
+.ProfilePhoto .BoxMain{
+    background-image: url("images/KakaoTalk_20230610_133225528.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.5s ease;
-}
-.Git .SmallBoxheader{
-    background-color: #bcdfba;
-}
-.Git .SmallBoxMain{
-    background-image: url("images/github.png");
-}
-.Tistory .SmallBoxheader{
-    background-color: rgb(232, 175, 175);
-}
-.Tistory .SmallBoxMain{
-    background-image: url("images/티스토리.png");
-}
-.BaekJoon .SmallBoxheader{
-    background-color: rgb(139, 186, 225);
-}
-.BaekJoon .SmallBoxMain{
-    background-image: url("images/백준.png");
-}
-.Git .SmallBoxMain::before,
-.Tistory .SmallBoxMain::before,
-.BaekJoon .SmallBoxMain::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.497);
-    transition: all 0.5s ease;
-}
-.Git .SmallBoxMain::after,
-.Tistory .SmallBoxMain::after,
-.BaekJoon .SmallBoxMain::after{
-    content: 'Click';
-    font-family: 'MaplestoryOTFBold';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.5s ease;
-}
-.Git .SmallBoxMain:hover::before,
-.Tistory .SmallBoxMain:hover::before,
-.BaekJoon .SmallBoxMain:hover::before{
-    opacity: 1;
-}
-.Git .SmallBoxMain:hover::after,
-.Tistory .SmallBoxMain:hover::after,
-.BaekJoon .SmallBoxMain:hover::after{
-    opacity: 1;
-    animation: bounce 0.8s infinite;
-}
-@keyframes bounce {
-    0%, 100%{
-        top: 0;
-    }
-    50%{
-        top: -10%;
-    }
-}
-/* 부드러운 스크롤 */
-.fade-wrap {
-    transition: 2s;
-    opacity: 0;
-    position: relative;
-    left: -30%;
 }
 
-.fade-wrap.fade-in {
-    opacity: 1;
-    left: 0;
+.ProfileSNS {
+    background-color: blanchedalmond;
 }
 
-/* input:range 커스텀 */
-input[type='range'] {
-    -webkit-appearance: none;
-    /* 기본 CSS 스타일을 적용하지 않기 위해서 */
-    width: 100%;
-    /* 슬라이더 길이 */
-    height: 7px;
-    /* 슬라이더 두께 */
-    border-radius: 5px;
-    /* 슬라이더 모서리를 약간 둥글게 */
-    background: linear-gradient(to right, #d5d5f4, #e9d0d6);
-    outline: none;
-    /* 슬라이더 테두리 없이 */
+.ProfileInformation {
+    background-color: #C4C4E0;
 }
 
-/* 슬라이더 핸들(클릭해서 드래그하는 부분) 커스텀  */
-input[type='range']::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: rgb(230, 230, 255);
-    border: 1px solid rgb(189, 189, 239);
-    cursor: pointer;
-    /* 슬라이더 핸들에 마우스를 갖다대면 포인터로 변경 */
-}
-
-input[type='range']::-moz-range-thumb {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: rgb(230, 230, 255);
-    border: 1px solid rgb(189, 189, 239);
-    cursor: pointer;
-    /* 슬라이더 핸들에 마우스를 갖다대면 포인터로 변경 */
+.ProfileMusic {
+    background-color: antiquewhite;
 }

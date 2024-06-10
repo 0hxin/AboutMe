@@ -39,22 +39,6 @@ targetElements.forEach((element) => {
 })(jQuery);
 $(".titleName").spanLetters();
 
-(function ($) {
-  $.fn.spanLetters = function () {
-    this.each(function () {
-      var words, i, text;
-      words = $(this).text().split("");
-      for (i = 0; i in words; i++) {
-        words[i] =
-          '<span class="sl' + (i + 1) + ' span-letter">' + words[i] + "</span>";
-      }
-      text = words.join("");
-      $(this).html(text);
-    });
-    return this;
-  };
-})(jQuery);
-$(".titleName").spanLetters();
 
 // 별 생성 및 반짝이는 효과
 $(document).ready(function () {
