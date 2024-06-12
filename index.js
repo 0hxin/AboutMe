@@ -39,7 +39,6 @@ targetElements.forEach((element) => {
 })(jQuery);
 $(".titleName").spanLetters();
 
-
 // 별 생성 및 반짝이는 효과
 $(document).ready(function () {
   var starCount = 100; // 별 개수 설정
@@ -72,7 +71,6 @@ function goToScroll(name) {
 
 // audio
 $(function () {
-  // const myAudio = document.getElementById("myAudio");
   const myAudio = new Audio("music.mp3");
   myAudio.volume = 1;
   // 오디오 재생시간 업데이트
@@ -97,59 +95,60 @@ $(function () {
     durationSpan.textContent = formatTime(myAudio.duration);
   });
 
-
   // 버튼 클릭시 레코드판 회전 애니메이션
-  let keyframes = [
-    {transform :  "rotate(360deg)"}
-  ];
+  let keyframes = [{ transform: "rotate(360deg)" }];
   let options = {
     delay: 500,
-  	duration: 5000,
-  	easing: "linear",
-  	iterations: Infinity,
+    duration: 5000,
+    easing: "linear",
+    iterations: Infinity,
   };
   const audioImg = document.getElementById("audioImg");
 
   // 재생, 멈춤
   const play = document.getElementById("audioPlay");
-  const pause = document.getElementById("audioStop");
   play.onclick = function () {
-    myAudio.play();
-    audioImg.animate(keyframes, options);
-  };
-  pause.onclick = function () {
-    myAudio.pause();
-    // 현재 요소의 회전 각도 가져오기
-    let computedStyle = window.getComputedStyle(audioImg);
-    let transformValue = computedStyle.getPropertyValue("transform");
-    let matrix = transformValue.replace(/[^0-9\-.,]/g, '').split(',');
-    let angle = Math.round(Math.atan2(matrix[1], matrix[0]) * (180/Math.PI));
-    
-    // 천천히 회전을 멈추도록 애니메이션 적용
-    audioImg.animate([{ transform: `rotate(${angle}deg)` }, { transform: 'rotate(0deg)' }], {
-        duration: 1000, // 1초 동안 천천히 멈추도록 설정
-        easing: 'ease-out', // 부드러운 멈춤 효과 적용
-        fill: 'both' // 애니메이션이 끝나면 해당 상태를 유지하도록 설정
-    }).onfinish = function() {
-        audioImg.style.transform = 'none'; // 애니메이션 완료 후 transform 속성 제거
-    };
+    if (myAudio.paused) {
+      play.innerHTML = '<ion-icon name="pause-outline"></ion-icon>';
+      myAudio.play();
+      audioImg.animate(keyframes, options);
+    } else {
+      play.innerHTML = '<ion-icon name="caret-forward-outline"></ion-icon>';
+      myAudio.pause();
+
+      // 현재 요소의 회전 각도 가져오기
+      let computedStyle = window.getComputedStyle(audioImg);
+      let transformValue = computedStyle.getPropertyValue("transform");
+      let matrix = transformValue.replace(/[^0-9\-.,]/g, "").split(",");
+      let angle = Math.round(
+        Math.atan2(matrix[1], matrix[0]) * (180 / Math.PI)
+      );
+
+      // 천천히 회전을 멈추도록 애니메이션 적용
+      audioImg.animate(
+        [{ transform: `rotate(${angle}deg)` }, { transform: "rotate(0deg)" }],
+        {
+          duration: 1000, // 1초 동안 천천히 멈추도록 설정
+          easing: "ease-out", // 부드러운 멈춤 효과 적용
+          fill: "both", // 애니메이션이 끝나면 해당 상태를 유지하도록 설정
+        }
+      ).onfinish = function () {
+        audioImg.style.transform = "none"; // 애니메이션 완료 후 transform 속성 제거
+      };
+    }
   };
 
   // 볼륨조절
   const audioVolume = document.getElementById("audioVolumn");
-  audioVolume.onclick = function(){
-    if(myAudio.volume === 1.0 ){
-      document.getElementById("audioVolumnImg").src = "images/volume-x.svg";
+  audioVolume.onclick = function () {
+    if (myAudio.volume === 1.0) {
       myAudio.volume = 0;
-    }
-    else{
-      document.getElementById("audioVolumnImg").src = "images/volume-2.svg";
+      audioVolume.innerHTML = '<ion-icon name="volume-mute"></ion-icon>';
+    } else {
       myAudio.volume = 1;
+      audioVolume.innerHTML = '<ion-icon name="volume-medium"></ion-icon>';
     }
-  }
-  audioVolume.addEventListener("input", () => {
-    myAudio.value = audioVolume.value;
-  });
+  };
 
   // 시간 포맷 함수 (초를 분:초로 변환)
   function formatTime(time) {
