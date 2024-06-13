@@ -157,3 +157,10 @@ $(function () {
     return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
   }
 });
+
+$(document).ready(function () {
+  $(".folderTitle").attr("src", "images/archivefolder.png");
+  $(".folder").attr("src", "images/folder.png");
+  $(".game").attr("src", "images/game.png");
+  $(".music").attr("src", "images/music.png");
+});

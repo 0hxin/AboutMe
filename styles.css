@@ -23,13 +23,20 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "BMJUA";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 /* 세로모드 모바일 디바이스 (가로 해상도가 576px 보다 작은 화면에 적용) */
 @media (max-width: 575px) {
   section .Boxheader,
   .myAudio span {
     font-size: 10px;
   }
-  section .Boxheader ion-icon {
+  .FontLarge {
     font-size: 15px;
   }
   .BoxSection {
@@ -54,27 +61,35 @@
     grid-column: 1/2;
     grid-row: 3/4;
   }
+  .ProfilePhoto .Boxheader span:nth-child(2) {
+    font-size: 9px;
+  }
   /* main-Profile, music */
   .ProfileMusic {
     grid-column: 2/3;
     grid-row: 2/5;
   }
-  .ProfileMusic .Boxheader {
-    font-size: 15px;
-  }
   #audioPlay {
     font-size: 20px;
   }
   /* main-Profile, Information */
+  .InforImg {
+    margin-right: 0.5em;
+    width: 15px;
+  }
+  .InforImgBig {
+    vertical-align: text-bottom;
+    width: 20px;
+  }
   .ProfileInformation {
     grid-column: 1/3;
     grid-row: 5/7;
   }
   .InformationTitle {
-    font-size: 20px;
+    font-size: 16px;
   }
   .InformationDetail {
-    font-size: 16px;
+    font-size: 13px;
   }
   /* main-AboutMe */
   /* main-AboutMe, History */
@@ -106,7 +121,7 @@
   .myAudio span {
     font-size: 8px;
   }
-  section .Boxheader ion-icon {
+  .FontLarge {
     font-size: 13px;
   }
   .BoxSection {
@@ -131,53 +146,51 @@
     grid-column: 4/6;
     grid-row: 1/4;
   }
+  .ProfilePhoto .Boxheader span:nth-child(2) {
+    font-size: 6px;
+  }
   /* main-Profile, Music */
   .ProfileMusic {
     grid-column: 6/8;
     grid-row: 1/7;
   }
-  .ProfileMusic .Boxheader {
-    font-size: 14px;
-  }
   #audioPlay {
     font-size: 20px;
   }
   /* main-Profile, Information */
+  .InforImg {
+    margin-right: 0.5em;
+    width: 15px;
+  }
+  .InforImgBig {
+    vertical-align: text-bottom;
+    width: 25px;
+  }
   .ProfileInformation {
     grid-column: 1/6;
     grid-row: 4/7;
   }
-  .ProfileInformation .BoxMain {
-    align-items: flex-start;
+  .InformationBox {
+    display: grid;
     grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(2, 1fr);
+  }
+  .InformationSection,
+  .GameSection {
+    grid-column: 1/2;
+  }
+  .InformationSection2 {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+  .MusicSection {
+    grid-column: 2/3;
   }
   .InformationTitle {
     font-size: 18px;
   }
   .InformationDetail {
     font-size: 14px;
-  }
-  .InformationSection {
-    grid-column: 1/2;
-    grid-row: 1/3;
-  }
-  .InformationSection2 {
-    grid-column: 2/3;
-    grid-row: 1/3;
-  }
-  .InformationSection2 .InformationDetail {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(2, auto);
-  }
-  .Game {
-    grid-row: 2/3;
-    grid-column: 1/2;
-  }
-  .Music {
-    grid-row: 2/3;
-    grid-column: 2/3;
   }
   /* main-AboutMe */
   #AboutSection .SectionTitle {
@@ -207,9 +220,7 @@
   .myAudio span {
     font-size: 11px;
   }
-  section .Boxheader ion-icon,
-  .SnsNumber,
-  .SnsID {
+  .FontLarge {
     font-size: 20px;
   }
   .BoxSection {
@@ -231,20 +242,26 @@
     grid-column: 1/3;
     grid-row: 2/3;
   }
+  .ProfilePhoto .Boxheader span:nth-child(1) {
+    font-size: 15px;
+  }
   /* main-Profile, Music */
   .ProfileMusic {
     grid-column: 1/3;
     grid-row: 3/6;
   }
-  .ProfileMusic .Boxheader,
-  #audioHeart,
-  #audioVolumn {
-    font-size: 20px;
-  }
   #audioPlay {
     font-size: 25px;
   }
   /* main-Profile, Information */
+  .InforImg {
+    margin-right: 0.3em;
+    width: 23px;
+  }
+  .InforImgBig {
+    vertical-align: text-bottom;
+    width: 30px;
+  }
   .ProfileInformation {
     grid-column: 3/6;
     grid-row: 2/4;
@@ -291,16 +308,13 @@
   .myAudio span {
     font-size: 12px;
   }
-  section .Boxheader ion-icon,
-  .SnsNumber,
-  .SnsID {
+  .FontLarge {
     font-size: 17px;
   }
   .BoxSection {
     grid-template-columns: 1fr 1fr 0.5fr 0.5fr 1fr;
     grid-template-rows: 0.8fr 0.2fr 1fr;
   }
-
   /* main-Profile */
   /* main-Profile, Title */
   .SectionTitle {
@@ -315,39 +329,45 @@
     grid-column: 1/2;
     grid-row: 1/2;
   }
+  .ProfilePhoto .Boxheader span:nth-child(1) {
+    font-size: 15px;
+  }
   /* main-Profile, music */
   .ProfileMusic {
     grid-column: 1/2;
     grid-row: 2/4;
   }
-  .ProfileMusic .Boxheader,
-  #audioHeart,
-  #audioVolumn {
-    font-size: 18px;
-  }
   #audioPlay {
     font-size: 25px;
   }
   /* main-Profile, Information */
+  .InforImg {
+    margin-right: 0.2em;
+    width: 23px;
+  }
+  .InforImgBig {
+    vertical-align: text-bottom;
+    width: 30px;
+  }
   .ProfileInformation {
     grid-column: 2/4;
     grid-row: 2/4;
+  }
+  .InformationSection2 {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+  .GameSection {
+    grid-column: 1/2;
+  }
+  .MusicSection {
+    grid-column: 2/3;
   }
   .InformationTitle {
     font-size: 23px;
   }
   .InformationDetail {
-    font-size: 18px;
-  }
-  .InformationSection2 .InformationDetail {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-  }
-  .Game {
-    grid-column: 1/2;
-  }
-  .Music {
-    grid-column: 2/3;
+    font-size: 19px;
   }
   /* main-Profile, SNS */
   .ProfileSNS {
@@ -385,8 +405,8 @@
   .myAudio span {
     font-size: 12px;
   }
-  section .Boxheader ion-icon {
-    font-size: 17px;
+  .FontLarge {
+    font-size: 27px;
   }
   .BoxSection {
     grid-template-columns: 1fr 1fr 0.5fr 0.5fr 1fr;
@@ -407,48 +427,50 @@
     grid-column: 1/2;
     grid-row: 1/2;
   }
+  .ProfilePhoto .Boxheader span:nth-child(1) {
+    font-size: 19px;
+  }
   /* main-Profile, music */
   .ProfileMusic {
     grid-column: 1/2;
     grid-row: 2/4;
   }
-  .ProfileMusic .Boxheader,
-  #audioHeart,
-  #audioVolumn {
-    font-size: 25px;
-  }
   #audioPlay {
     font-size: 30px;
   }
   /* main-Profile, Information */
+  .InforImg {
+    margin-right: 0.1em;
+    width: 25px;
+  }
+  .InforImgBig {
+    vertical-align: text-bottom;
+    width: 40px;
+  }
   .ProfileInformation {
     grid-column: 2/4;
     grid-row: 2/4;
   }
-  .InformationTitle {
-    font-size: 32px;
-  }
-  .InformationDetail {
-    font-size: 27px;
-  }
-  .InformationSection2 .InformationDetail {
+  .InformationSection2 {
     display: grid;
     grid-template-columns: repeat(2, auto);
   }
-  .Game {
+  .GameSection {
     grid-column: 1/2;
   }
-  .Music {
+  .MusicSection {
     grid-column: 2/3;
+  }
+  .InformationTitle {
+    font-size: 30px;
+  }
+  .InformationDetail {
+    font-size: 26px;
   }
   /* main-Profile, SNS */
   .ProfileSNS {
     grid-column: 4/6;
     grid-row: 2/4;
-  }
-  .SnsID,
-  .SnsNumber {
-    font-size: 25px;
   }
   .SnsText,
   .SnsDetail,
@@ -543,6 +565,9 @@ section {
 }
 .Hakgyo {
   font-family: "HakgyoansimWoojuR";
+}
+.Bm {
+  font-family: "BMJUA";
 }
 /* left, right */
 .TextLeft {
@@ -662,6 +687,16 @@ section {
   padding: 1em;
   overflow: hidden;
 }
+/* sectionBox */
+section .Box {
+  border: none;
+  box-shadow: 2px 2px 2px #dadada;
+}
+section .Boxheader {
+  border: none;
+  color: rgb(82, 82, 82);
+  justify-content: center;
+}
 
 /* main-BoxHeader Color */
 .MainBoxHeader {
@@ -676,24 +711,6 @@ section {
   background-color: rgba(255, 255, 255, 0.619);
   border-radius: 1.5em;
   color: #9292b7;
-}
-.GreenHeader {
-  background-color: #84b99b;
-}
-.BlueHeader {
-  background-color: #9cabcf;
-}
-.PinkHeader {
-  background-color: #fcdadf;
-}
-.DarkPinkHeader {
-  background-color: #eeb3be;
-}
-.PurpleHeader {
-  background-color: #b1a6c5;
-}
-.SkyBlueHeader {
-  background-color: #9cabcf;
 }
 
 /* main-BoxHeader btn */
@@ -734,15 +751,6 @@ section {
   background-position: bottom;
   background-repeat: no-repeat;
 }
-.SectionTitle .Boxheader span:nth-child(1) {
-  color: #ffe4ee;
-}
-.SectionTitle .Boxheader span:nth-child(2) {
-  color: #cdffdf;
-}
-.SectionTitle .Boxheader span:nth-child(3) {
-  color: #c0e1ff;
-}
 .SectionTitle .BoxMain {
   align-self: center;
 }
@@ -753,47 +761,75 @@ section {
   font-style: italic;
 }
 /* main-Profile, Photo */
+.ProfilePhoto .Boxheader {
+  padding: 0.2em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-wrap: nowrap;
+}
+.ProfilePhoto .Boxheader span:nth-child(1) {
+  margin-bottom: -0.5em;
+}
 .ProfilePhoto .BoxMain {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  padding: 0;
+}
+.ProfileImg {
   background-image: url("images/KakaoTalk_20230610_133225528.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+.ProfileText {
+  color: #a8b4e1;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  text-align: center;
+}
+.ProfileText span:nth-child(1) {
+  border-right: 1px solid #a8b4e1;
+}
 /* main-Profile, Information */
+.ProfileInformation .Box {
+  grid-template-rows: 1fr;
+  text-wrap: nowrap;
+  background-image: url("images/PinkWavy.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .ProfileInformation .BoxMain {
+  padding: 0em 0.5em;
+  align-content: center;
+}
+.InformationBox {
   display: grid;
   align-items: center;
-  text-wrap: nowrap;
-  background-image: url("images/PinkWavy.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  color: black;
 }
-.InformationTitle {
-  color: white;
-  text-shadow: 2px 2px 0 #e6b2a6;
-  -webkit-text-stroke: 1px #e6b2a6;
+.InformationSection,
+.InformationSection2 {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
 }
-.InformationTitle ion-icon {
-  color: #e6b2a6;
-}
-.InformationDetail {
-  margin-left: 1em;
-}
-.InformationDetail ion-icon {
-  color: #ffeecb;
-}
-.MusicGame {
+.InformationDetail,
+.InforSectionDetail {
+  display: flex;
+  flex-direction: column;
   margin-left: 0.5em;
 }
-.MusicGame ion-icon {
-  color: #d8ade0;
+.InforImg {
+  vertical-align: middle;
 }
 /* main-Profile, SNS */
 .ProfileSNS .Boxheader {
-  border: none;
   color: #9b86b1;
-  justify-content: right;
+  justify-content: left;
+  align-items: center;
 }
 .ProfileSNS .BoxMain {
   display: grid;
@@ -808,16 +844,16 @@ section {
 }
 .ProfileSNS a::before {
   z-index: 2;
-  content: "";
+  content: "dd";
   background: url("images/heart.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   opacity: 0;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
@@ -838,7 +874,7 @@ section {
     transform: scale(1);
   }
   to {
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
 }
 .SnsImg {
@@ -910,25 +946,14 @@ section {
   justify-content: space-between;
 }
 /* main-Profile, music */
-.ProfileMusic .Box,
-.ProfileSNS .Box,
-.SkillSectionTwo .Box {
-  border: none;
-  box-shadow: 2px 2px 2px #dadada;
-}
 .ProfileMusic .Box {
   background: url("images/stacked-waves-haikei.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-.ProfileMusic .Boxheader,
-.SkillSectionTwo .Boxheader {
-  border: none;
-  color: rgb(82, 82, 82);
-  justify-content: center;
-}
 .ProfileMusic .BoxMain {
+  padding: 0.2em;
   align-items: center;
   justify-items: center;
 }
@@ -958,7 +983,6 @@ section {
   grid-row: 1/2;
   grid-column: 1/4;
   -webkit-appearance: none;
-  width: 100%;
   height: 5px;
   border-radius: 0.5em;
   background: linear-gradient(to right, #dae2f8, #9cabcf);
