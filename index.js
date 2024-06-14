@@ -157,11 +157,36 @@ $(function () {
     return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
   }
 });
-
+// img 태그 경로설정
 $(document).ready(function () {
   $(".User").attr("src", "images/user.png");
   $(".Birthday").attr("src", "images/birthday.png");
   $(".School").attr("src", "images/school.png");
   $(".Game").attr("src", "images/game.png");
   $(".Music").attr("src", "images/music.png");
+});
+
+// Skill Graph 높이, 색상 설정
+document.addEventListener("DOMContentLoaded", function () {
+  // 각 스킬에 대한 높이와 색깔 값을 설정합니다.
+  const skillStyles = {
+    JAVA: { height: "92%", color: "#a2baef" },
+    Python: { height: "80%", color: "#b4d5ff" },
+    "C++": { height: "83%", color: "#a2c1ef" },
+    Oracle: { height: "93%", color: "#94ABDC" },
+  };
+
+  // 모든 SkillGraph 요소와 SkillName 요소를 가져옵니다.
+  const skillGraphs = document.querySelectorAll(".SkillGraph");
+  const skillNames = document.querySelectorAll(".SkillName");
+
+  skillGraphs.forEach((graph, index) => {
+    // 해당 SkillGraph의 순서에 맞는 SkillName 요소를 가져옵니다.
+    const skillName = skillNames[index].textContent.trim();
+    // 스킬 이름에 맞는 높이와 색깔을 설정합니다.
+    if (skillStyles[skillName]) {
+      graph.style.height = skillStyles[skillName].height;
+      graph.style.backgroundColor = skillStyles[skillName].color;
+    }
+  });
 });
