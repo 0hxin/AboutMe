@@ -159,8 +159,9 @@ $(function () {
 });
 
 $(document).ready(function () {
-  $(".folderTitle").attr("src", "images/archivefolder.png");
-  $(".folder").attr("src", "images/folder.png");
-  $(".game").attr("src", "images/game.png");
-  $(".music").attr("src", "images/music.png");
+  $(".User").attr("src", "images/user.png");
+  $(".Birthday").attr("src", "images/birthday.png");
+  $(".School").attr("src", "images/school.png");
+  $(".Game").attr("src", "images/game.png");
+  $(".Music").attr("src", "images/music.png");
 });

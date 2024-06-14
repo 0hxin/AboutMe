@@ -23,17 +23,12 @@
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "BMJUA";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 /* 세로모드 모바일 디바이스 (가로 해상도가 576px 보다 작은 화면에 적용) */
 @media (max-width: 575px) {
   section .Boxheader,
-  .myAudio span {
+  .myAudio span,
+  .InformationDetail span:nth-child(2),
+  .SkillNum {
     font-size: 10px;
   }
   .FontLarge {
@@ -73,23 +68,15 @@
     font-size: 20px;
   }
   /* main-Profile, Information */
-  .InforImg {
-    margin-right: 0.5em;
-    width: 15px;
-  }
-  .InforImgBig {
-    vertical-align: text-bottom;
-    width: 20px;
-  }
   .ProfileInformation {
     grid-column: 1/3;
     grid-row: 5/7;
   }
-  .InformationTitle {
-    font-size: 16px;
-  }
   .InformationDetail {
-    font-size: 13px;
+    font-size: 14px;
+  }
+  .InformationImg {
+    width: 20px;
   }
   /* main-AboutMe */
   /* main-AboutMe, History */
@@ -104,12 +91,12 @@
     gap: 0.3em;
   }
   /* main-AboutMe, Skill */
-  .SkillSection {
-    grid-row: 2/4;
+  .AboutSkill {
+    grid-row: 2/5;
     grid-column: 2/3;
   }
   /* main-AboutMe, Skill2 */
-  .SkillSectionTwo {
+  .AboutSkill2 {
     grid-row: 2/5;
     grid-column: 1/2;
   }
@@ -118,7 +105,8 @@
 /* 가로모드 모바일 디바이스 (가로 해상도가 576px보다 크고 768px 보다 작은 화면에 적용)  */
 @media (min-width: 576px) and (max-width: 767px) {
   section .Boxheader,
-  .myAudio span {
+  .myAudio span,
+  .SkillNum {
     font-size: 8px;
   }
   .FontLarge {
@@ -158,39 +146,35 @@
     font-size: 20px;
   }
   /* main-Profile, Information */
-  .InforImg {
-    margin-right: 0.5em;
-    width: 15px;
-  }
-  .InforImgBig {
-    vertical-align: text-bottom;
-    width: 25px;
-  }
   .ProfileInformation {
     grid-column: 1/6;
     grid-row: 4/7;
   }
-  .InformationBox {
+  .ProfileInformation .BoxMain {
     display: grid;
+    grid-template-rows: repeat(2, auto);
     grid-template-columns: repeat(2, auto);
   }
-  .InformationSection,
-  .GameSection {
+  .InformationTitle {
+    grid-row: 1/2;
+    grid-column: 1/3;
+  }
+  .InformationDetail {
+    font-size: 12px;
+  }
+  .InformationDetail span:nth-child(2) {
+    font-size: 10px;
+  }
+  .InformationSection {
+    grid-row: 2/3;
     grid-column: 1/2;
   }
   .InformationSection2 {
-    grid-column: 2/3;
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-  }
-  .MusicSection {
+    grid-row: 2/3;
     grid-column: 2/3;
   }
-  .InformationTitle {
-    font-size: 18px;
-  }
-  .InformationDetail {
-    font-size: 14px;
+  .InformationImg {
+    width: 20px;
   }
   /* main-AboutMe */
   #AboutSection .SectionTitle {
@@ -203,12 +187,15 @@
     grid-column: 1/3;
   }
   /* main-AboutMe, Skill */
-  .SkillSection {
-    grid-row: 4/7;
+  .AboutSkill {
+    grid-row: 3/7;
     grid-column: 3/6;
   }
+  .SkillName {
+    font-size: 12px;
+  }
   /* main-AboutMe, Skill2 */
-  .SkillSectionTwo {
+  .AboutSkill2 {
     grid-row: 3/7;
     grid-column: 6/8;
   }
@@ -217,7 +204,8 @@
 /*태블릿 디바이스 (가로 해상도가 768px보다 크고 991px 보다 작은 화면에 적용)  */
 @media (min-width: 768px) and (max-width: 991px) {
   section .Boxheader,
-  .myAudio span {
+  .myAudio span,
+  .SkillNum {
     font-size: 11px;
   }
   .FontLarge {
@@ -254,23 +242,15 @@
     font-size: 25px;
   }
   /* main-Profile, Information */
-  .InforImg {
-    margin-right: 0.3em;
-    width: 23px;
-  }
-  .InforImgBig {
-    vertical-align: text-bottom;
-    width: 30px;
-  }
   .ProfileInformation {
     grid-column: 3/6;
     grid-row: 2/4;
   }
-  .InformationTitle {
-    font-size: 23px;
+  .InformationImg {
+    width: 35px;
   }
-  .InformationDetail {
-    font-size: 18px;
+  .InformationDetail span:nth-child(2) {
+    font-size: 13px;
   }
   /* main-Profile, SNS */
   .ProfileSNS {
@@ -291,12 +271,12 @@
     grid-column: 1/6;
   }
   /* main-AboutMe, Skill */
-  .SkillSection {
+  .AboutSkill {
     grid-row: 2/4;
     grid-column: 1/4;
   }
   /* main-AboutMe, Skill2 */
-  .SkillSectionTwo {
+  .AboutSkill2 {
     grid-row: 2/4;
     grid-column: 4/6;
   }
@@ -305,7 +285,9 @@
 /* 데스크탑 (가로 해상도가 992px보다 크고 1199px 보다 작은 화면에 적용)  */
 @media (min-width: 992px) and (max-width: 1199px) {
   section .Boxheader,
-  .myAudio span {
+  .myAudio span,
+  .InformationDetail span:nth-child(2),
+  .SkillNum {
     font-size: 12px;
   }
   .FontLarge {
@@ -341,33 +323,12 @@
     font-size: 25px;
   }
   /* main-Profile, Information */
-  .InforImg {
-    margin-right: 0.2em;
-    width: 23px;
-  }
-  .InforImgBig {
-    vertical-align: text-bottom;
-    width: 30px;
-  }
   .ProfileInformation {
     grid-column: 2/4;
     grid-row: 2/4;
   }
-  .InformationSection2 {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-  }
-  .GameSection {
-    grid-column: 1/2;
-  }
-  .MusicSection {
-    grid-column: 2/3;
-  }
-  .InformationTitle {
-    font-size: 23px;
-  }
-  .InformationDetail {
-    font-size: 19px;
+  .InformationImg {
+    width: 25px;
   }
   /* main-Profile, SNS */
   .ProfileSNS {
@@ -388,12 +349,12 @@
     grid-column: 3/6;
   }
   /* main-AboutMe, Skill */
-  .SkillSection {
+  .AboutSkill {
     grid-row: 2/4;
     grid-column: 2/3;
   }
   /* main-AboutMe, Skill2 */
-  .SkillSectionTwo {
+  .AboutSkill2 {
     grid-row: 1/4;
     grid-column: 1/2;
   }
@@ -402,7 +363,8 @@
 /* 큰화면 데스크탑 (가로 해상도가 1200px 보다 큰 화면에 적용)  */
 @media (min-width: 1200px) {
   section .Boxheader,
-  .myAudio span {
+  .myAudio span,
+  .SkillNum {
     font-size: 12px;
   }
   .FontLarge {
@@ -439,33 +401,18 @@
     font-size: 30px;
   }
   /* main-Profile, Information */
-  .InforImg {
-    margin-right: 0.1em;
-    width: 25px;
-  }
-  .InforImgBig {
-    vertical-align: text-bottom;
-    width: 40px;
-  }
   .ProfileInformation {
     grid-column: 2/4;
     grid-row: 2/4;
   }
-  .InformationSection2 {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-  }
-  .GameSection {
-    grid-column: 1/2;
-  }
-  .MusicSection {
-    grid-column: 2/3;
-  }
-  .InformationTitle {
-    font-size: 30px;
+  .InformationImg {
+    width: 42px;
   }
   .InformationDetail {
-    font-size: 26px;
+    font-size: 23px;
+  }
+  .InformationDetail span:nth-child(2) {
+    font-size: 20px;
   }
   /* main-Profile, SNS */
   .ProfileSNS {
@@ -487,12 +434,12 @@
     grid-column: 3/6;
   }
   /* main-AboutMe, Skill */
-  .SkillSection {
+  .AboutSkill {
     grid-row: 2/4;
     grid-column: 2/3;
   }
   /* main-AboutMe, Skill2 */
-  .SkillSectionTwo {
+  .AboutSkill2 {
     grid-row: 1/4;
     grid-column: 1/2;
   }
@@ -566,9 +513,6 @@ section {
 .Hakgyo {
   font-family: "HakgyoansimWoojuR";
 }
-.Bm {
-  font-family: "BMJUA";
-}
 /* left, right */
 .TextLeft {
   margin-right: auto;
@@ -637,7 +581,6 @@ section {
   left: 0;
   z-index: 0;
 }
-
 .star {
   position: absolute;
   background: white;
@@ -746,10 +689,7 @@ section .Boxheader {
 /* main-Profile */
 /* main-Profile, Title */
 .SectionTitle .Box {
-  background-image: url("images/Cloudy.svg");
-  background-size: cover;
-  background-position: bottom;
-  background-repeat: no-repeat;
+  background: url("images/Cloudy.svg") bottom/cover no-repeat;
 }
 .SectionTitle .BoxMain {
   align-self: center;
@@ -777,10 +717,8 @@ section .Boxheader {
   padding: 0;
 }
 .ProfileImg {
-  background-image: url("images/KakaoTalk_20230610_133225528.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url("images/KakaoTalk_20230610_133225528.jpg") center/cover
+    no-repeat;
 }
 .ProfileText {
   color: #a8b4e1;
@@ -796,34 +734,64 @@ section .Boxheader {
 /* main-Profile, Information */
 .ProfileInformation .Box {
   grid-template-rows: 1fr;
+  grid-template-columns: auto 1fr;
   text-wrap: nowrap;
-  background-image: url("images/PinkWavy.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url("images/PinkWavy.svg") center/cover no-repeat;
+}
+.ProfileInformation .Boxheader,
+.InformationImg {
+  background-color: #ffd8d8;
+  color: white;
+}
+.ProfileInformation .Boxheader {
+  grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+}
+.ProfileInformation .Boxheader ion-icon {
+  padding: 0.5em;
+  box-shadow: 2px 2px 3px #ffcbcb, -2px -2px 3px rgb(255, 230, 230);
+  border-radius: 50%;
+  border: 1px solid #ffd7d7;
+}
+.ProfileInformation .Boxheader ion-icon:nth-of-type(3),
+.InformationImg {
+  background-color: rgb(250, 212, 212);
+  box-shadow: inset 2px 2px 3px #ffcbcb, inset -2px -2px 3px rgb(255, 230, 230);
 }
 .ProfileInformation .BoxMain {
-  padding: 0em 0.5em;
-  align-content: center;
-}
-.InformationBox {
-  display: grid;
+  padding: 0.3em 0.5em;
   align-items: center;
-  color: black;
+}
+.InformationTitle {
+  display: flex;
+  margin-bottom: 0.3em;
+  color: #ebab98;
 }
 .InformationSection,
 .InformationSection2 {
-  display: grid;
-  grid-template-rows: repeat(2, auto);
-}
-.InformationDetail,
-.InforSectionDetail {
   display: flex;
   flex-direction: column;
-  margin-left: 0.5em;
+  gap: 0.3em;
 }
-.InforImg {
-  vertical-align: middle;
+.InformationBox {
+  background-color: rgba(255, 255, 255, 0.517);
+  display: grid;
+  gap: 0.5em;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  border-radius: 0.5em;
+  padding: 0.3em;
+}
+.InformationImg {
+  grid-column: 1/2;
+  padding: 0.3em;
+  border-radius: 50%;
+}
+.InformationDetail {
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
 }
 /* main-Profile, SNS */
 .ProfileSNS .Boxheader {
@@ -845,10 +813,7 @@ section .Boxheader {
 .ProfileSNS a::before {
   z-index: 2;
   content: "dd";
-  background: url("images/heart.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  background: url("images/heart.png") center/contain no-repeat;
   opacity: 0;
   position: absolute;
   display: flex;
@@ -947,10 +912,7 @@ section .Boxheader {
 }
 /* main-Profile, music */
 .ProfileMusic .Box {
-  background: url("images/stacked-waves-haikei.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url("images/stacked-waves-haikei.svg") center/cover no-repeat;
 }
 .ProfileMusic .BoxMain {
   padding: 0.2em;
@@ -965,10 +927,7 @@ section .Boxheader {
 }
 #audioImg {
   grid-row: 1/2;
-  background-image: url("images/CD.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url("images/CD.png") center/contain no-repeat;
 }
 .myAudio {
   display: flex;
@@ -1058,10 +1017,7 @@ input[type="range"]::-moz-range-thumb {
 }
 /* main-AboutMe, title */
 #AboutSection .SectionTitle .Box {
-  background: url("images/Cloudy2.svg");
-  background-size: cover;
-  background-position: bottom;
-  background-repeat: no-repeat;
+  background: url("images/Cloudy2.svg") bottom/cover no-repeat;
 }
 /* main-AboutMe, History */
 .HistorySection,
@@ -1071,4 +1027,108 @@ input[type="range"]::-moz-range-thumb {
 }
 .HistoryText {
   margin-left: 0.5em;
+}
+/* main-AboutMe, Skill1 */
+.AboutSkill .Boxheader {
+  padding-bottom: 0;
+}
+.AboutSkill .BoxMain {
+  background: url("images/bluewavy.png") center/cover no-repeat;
+  padding: 0em 0.5em 0.5em 0.5em;
+  overflow: hidden;
+}
+.SkillSection {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  padding: 0.3em;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr auto;
+}
+.SkillSection::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.614);
+  background: rgba(255, 255, 255, 0.169); /* 반투명한 배경 설정 */
+  backdrop-filter: blur(25px); /* 블러 효과 적용 */
+  -webkit-backdrop-filter: blur(25px);
+  border-radius: 0.5em;
+  z-index: -1;
+}
+.SkillName,
+.SkillGraph {
+  grid-row: 1/2;
+  align-items: center;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+}
+.SkillName {
+  grid-column: 1/2;
+  text-align: right;
+  margin-right: 0.3em;
+  color: rgb(82, 82, 82);
+}
+.SkillGraph {
+  grid-column: 2/3;
+  border-left: 1px solid #9cabcf;
+}
+.SkillGraph div {
+  height: 30%;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  background-color: #9cabcf;
+  box-shadow: inset 2px 2px 2px #7e8db1;
+}
+.SkillGraph div:nth-child(1),
+.SkillGraph div:nth-child(4) {
+  width: 94%;
+}
+.SkillGraph div:nth-child(2),
+.SkillGraph div:nth-child(3) {
+  width: 86%;
+}
+.SkillGraph div:nth-last-child(1) {
+  width: 90%;
+}
+.SkillNum {
+  color: black;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  border-top: 1px solid #9cabcf;
+  display: flex;
+  justify-content: space-between;
+}
+/* main-AboutMe, Skill2 */
+.AboutSkill2 .Box {
+  background: url("images/purpleWavy.jpg") center/cover no-repeat;
+}
+.AboutSkill2 .BoxMain {
+  padding: 0.5em 0em;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.2em;
+}
+.SkillMenu {
+  grid-column: 2/3;
+}
+.SkillLink {
+  grid-column: 1/2;
+  display: grid;
+  gap: 0.3em;
+  grid-template-rows: repeat(3, 1fr);
+}
+.AboutSkill2 a {
+  padding: 0.3em;
+  margin-right: 0.3em;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  background-color: rgba(255, 255, 255, 0.486);
+  color: rgb(189, 158, 255);
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 1fr auto;
 }
