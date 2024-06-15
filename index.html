@@ -23,27 +23,23 @@
       <main>
         <section class="fade-wrap" id="ProfileSection">
           <div class="Box">
-            <div class="Boxheader MainBoxHeader gap BalooPaaji">
-              <div class="gap">
-                <span>←</span>
-                <span>→</span>
-                <span>⟳</span>
-              </div>
+            <div class="Boxheader MainBoxHeader BalooPaaji">
               <div class="HeaderTitle">
                 <span> https:\\Profile </span>
+                <ion-icon
+                  class="TextRight FontLarge"
+                  name="download-outline"
+                ></ion-icon>
               </div>
               <div class="headerSubmit gap">
                 <button
                   onclick="goToScroll('ProfileSection')"
                   disabled
-                  class="MovSansBold"
+                  class="BalooPaaji"
                 >
                   Profile
                 </button>
-                <button
-                  onclick="goToScroll('AboutSection')"
-                  class="MovSansBold"
-                >
+                <button onclick="goToScroll('AboutSection')" class="BalooPaaji">
                   About Me
                 </button>
               </div>
@@ -218,25 +214,24 @@
         </section>
         <section class="fade-wrap" id="AboutSection">
           <div class="Box">
-            <div class="Boxheader MainBoxHeader gap BalooPaaji">
-              <div class="gap">
-                <span>←</span>
-                <span>→</span>
-                <span>⟳</span>
-              </div>
+            <div class="Boxheader MainBoxHeader BalooPaaji">
               <div class="HeaderTitle">
                 <span> https:\\AboutMe </span>
+                <ion-icon
+                  class="TextRight FontLarge"
+                  name="download-outline"
+                ></ion-icon>
               </div>
               <div class="headerSubmit gap">
                 <button
                   onclick="goToScroll('ProfileSection')"
-                  class="MovSansBold"
+                  class="BalooPaaji"
                 >
                   Profile
                 </button>
                 <button
                   onclick="goToScroll('AboutSection')"
-                  class="MovSansBold"
+                  class="BalooPaaji"
                   disabled
                 >
                   About Me
@@ -294,18 +289,32 @@
                     <ion-icon name="desktop-sharp"></ion-icon>
                     <ion-icon name="options-sharp"></ion-icon>
                   </div>
-                  <div class="BoxMain">
-                    <div class="SkillGraphSection">
-                      <div class="SkillGraph"></div>
-                      <div class="SkillGraph"></div>
-                      <div class="SkillGraph"></div>
-                      <div class="SkillGraph"></div>
-                    </div>
-                    <div class="SkillNameSection BalooPaaji">
-                      <span class="SkillName">JAVA</span>
-                      <span class="SkillName">Python</span>
-                      <span class="SkillName">C++</span>
-                      <span class="SkillName">Oracle</span>
+                  <div class="BoxMain BalooPaaji">
+                    <div class="AboutSkillSection gap">
+                      <div class="SkillGraphSection">
+                        <div class="SkillGraph">
+                          <div class="SkillText"></div>
+                        </div>
+                        <span class="SkillNumber Hakgyo TextRight"></span>
+                      </div>
+                      <div class="SkillGraphSection">
+                        <div class="SkillGraph">
+                          <div class="SkillText"></div>
+                        </div>
+                        <span class="SkillNumber Hakgyo TextRight"></span>
+                      </div>
+                      <div class="SkillGraphSection">
+                        <div class="SkillGraph">
+                          <div class="SkillText"></div>
+                        </div>
+                        <span class="SkillNumber Hakgyo TextRight"></span>
+                      </div>
+                      <div class="SkillGraphSection">
+                        <div class="SkillGraph">
+                          <div class="SkillText"></div>
+                        </div>
+                        <span class="SkillNumber Hakgyo TextRight"></span>
+                      </div>
                     </div>
                   </div>
                 </div>
