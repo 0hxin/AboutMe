@@ -166,55 +166,173 @@ $(document).ready(function () {
   $(".Music").attr("src", "images/music.png");
 });
 
-// Skill Graph 높이, 색상 설정
+// Skill Btn Text
 document.addEventListener("DOMContentLoaded", function () {
-  const skillStyles = [
-    {
-      text: "JAVA",
-      height: "100%",
-      width: "92%",
-      color: "#FFB896",
-      textcolor: "#ffad86",
-    },
-    {
-      text: "Python",
-      height: "100%",
-      width: "80%",
-      color: "#74A6FD",
-      textcolor: "#5d8ee1",
-    },
-    {
-      text: "C++",
-      height: "100%",
-      width: "83%",
-      color: "#FFA6C3",
-      textcolor: "#ee8dad",
-    },
-    {
-      text: "Oracle",
-      height: "100%",
-      width: "93%",
-      color: "#C6ACFF",
-      textcolor: "#ab90e6",
-    },
-  ];
-
-  const skillNames = document.querySelectorAll(".SkillText");
-  const skillNumbers = document.querySelectorAll(".SkillNumber");
-
-  skillNames.forEach((name, index) => {
-    if (index < skillStyles.length) {
-      name.style.width = skillStyles[index].width;
-      name.style.height = skillStyles[index].height;
-      name.textContent = skillStyles[index].text;
-      name.style.background = skillStyles[index].color;
-      name.style.color = skillStyles[index].textcolor;
-    }
+  const skillButtons = document.querySelectorAll(".SkillBtn");
+  skillButtons.forEach((button) => {
+    button.innerHTML = button.id;
   });
-
-  skillNumbers.forEach((number, index) => {
-    if (index < skillStyles.length) {
-      number.textContent = skillStyles[index].width;
-    }
-  });
+  // 페이지가 로드될 때 "JAVA" 버튼을 기본으로 클릭된 상태로 설정
+  SkillButton("JAVA");
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const skillButtons = document.querySelectorAll(".SkillBtn");
+  skillButtons.forEach((button) => {
+    button.innerHTML = button.id;
+  });
+  // 페이지가 로드될 때 "JAVA" 버튼을 기본으로 클릭된 상태로 설정
+  SkillButton("JAVA");
+});
+
+function SkillButton(name) {
+  const SkillStyles = {
+    JAVA: {
+      text: "JAVA",
+      percentage: 92,
+      color: "#CEC7F1",
+      textColor: "#c1b7f5",
+    },
+    Python: {
+      text: "Python",
+      percentage: 84,
+      color: "#BFB3D9",
+      textColor: "#ad9bd5",
+    },
+    "C++": {
+      text: "C++",
+      percentage: 85,
+      color: "#CEE2FF",
+      textColor: "#acc8f3",
+    },
+    Oracle: {
+      text: "Oracle",
+      percentage: 93,
+      color: "#d3dcff",
+      textColor: "#b6c1ec",
+    },
+  };
+
+  Object.keys(SkillStyles).forEach((key) => {
+    const SkillName = SkillStyles[key].text.trim();
+    if (name === SkillName) {
+      drawDonutChart(
+        SkillStyles[key].percentage,
+        SkillStyles[key].color,
+        SkillStyles[key].textColor,
+        SkillStyles[key].text
+      );
+    }
+  });
+
+  // 선택된 버튼에 스타일 적용
+  const selectedButton = document.getElementById(name);
+  const skillButtons = document.querySelectorAll(".SkillBtn");
+  skillButtons.forEach((button) => {
+    button.classList.remove("Selected");
+  });
+  selectedButton.classList.add("Selected");
+}
+
+function drawDonutChart(percentage, color, textColor, text) {
+  const ChartSection = document.getElementsByClassName("AboutSkillSection")[0];
+  const width = ChartSection.clientWidth;
+  const height = ChartSection.clientWidth;
+
+  console.log("Width: ", width, "Height: ", height); // 크기 확인을 위한 로그
+
+  // 기존 차트를 제거
+  d3.select("#Skillchart").selectAll("*").remove();
+  const radius = width / 2;
+
+  const svg = d3
+    .select("#Skillchart")
+    .append("svg")
+    .attr("viewBox", `0 0 ${width} ${height}`)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .append("g")
+    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+  const data = { value: percentage, rest: 100 - percentage };
+  const pie = d3
+    .pie()
+    .value((d) => d.value)
+    .sort(null);
+
+  const data_ready = pie(d3.entries(data));
+  const arc = d3
+    .arc()
+    .innerRadius(radius * 0.5)
+    .outerRadius(radius * 0.7)
+    .cornerRadius(radius * 0.5); // 둥근 끝을 설정
+
+  svg
+    .selectAll("slices")
+    .data(data_ready)
+    .enter()
+    .append("path")
+    .attr("d", arc)
+    .attr("fill", (d) => (d.data.key === "value" ? color : "transparent"))
+    .style("stroke-linecap", "round") // 둥근 끝을 설정
+    .transition()
+    .duration(3000)
+    .attrTween("d", function (d) {
+      const i = d3.interpolate(
+        { startAngle: -0.5 * Math.PI, endAngle: -0.5 * Math.PI },
+        d
+      );
+      return function (t) {
+        return arc(i(t));
+      };
+    });
+
+  // 반응형 폰트 크기 설정
+  const fontSize = Math.min(width, height) / 10;
+
+  // 차트 중앙에 텍스트 추가
+  svg
+    .append("text")
+    .attr("text-anchor", "middle")
+    .attr("font-size", fontSize + "px") // 반응형 폰트 크기
+    .attr("font-family", "LOTTERIACHAB") // 글씨체 설정
+    .attr("fill", textColor) // fill 속성으로 텍스트 색상 설정
+    .attr("dy", "0.35em")
+    .text(0)
+    .transition()
+    .duration(3000)
+    .tween("text", function () {
+      const that = d3.select(this);
+      const i = d3.interpolateNumber(0, percentage);
+      return function (t) {
+        that.text(Math.round(i(t)) + "%");
+      };
+    });
+  // 차트 아래에 텍스트 추가
+  const textElement = svg
+    .append("text")
+    .attr("text-anchor", "middle")
+    .attr("font-size", fontSize + "px") // 반응형 폰트 크기
+    .attr("font-family", "LOTTERIACHAB") // 글씨체 설정
+    .attr("dy", radius + 5) // 차트 아래에 위치
+    .attr("fill", "white");
+
+  textElement
+    .append("tspan")
+    .attr("fill", "white")
+    .attr(
+      "style",
+      `text-shadow: -1px 0px 0 ${color}, 1px 0px 0 ${color}, 0px -1px 0 ${color}, 0px 1px 0 ${color};`
+    )
+    .text("My ");
+
+  textElement.append("tspan").attr("fill", color).text(text);
+
+  textElement
+    .append("tspan")
+    .attr("fill", "white")
+    .attr(
+      "style",
+      `text-shadow: -1px 0px 0 ${color}, 1px 0px 0 ${color}, 0px -1px 0 ${color}, 0px 1px 0 ${color};`
+    )
+    .text(" Skills");
+}

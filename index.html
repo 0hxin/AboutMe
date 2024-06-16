@@ -147,8 +147,8 @@
                       <div class="SnsBtn gap">
                         <span class="SnsID FontLarge">gfedcbaejin</span>
                         <span class="SnsDetail">박애진</span>
-                        <button>Followers</button>
-                        <button>Following</button>
+                        <button>Follow</button>
+                        <button>Message</button>
                         <button class="SnsIconBtn">
                           <ion-icon name="people-outline"></ion-icon>
                         </button>
@@ -282,39 +282,31 @@
               </div>
               <div class="AboutSkill">
                 <div class="Box">
-                  <div class="Boxheader">
-                    <ion-icon name="search-sharp"></ion-icon>
-                    <ion-icon name="share-social-sharp"></ion-icon>
-                    <ion-icon name="reader-sharp"></ion-icon>
-                    <ion-icon name="desktop-sharp"></ion-icon>
-                    <ion-icon name="options-sharp"></ion-icon>
-                  </div>
-                  <div class="BoxMain BalooPaaji">
-                    <div class="AboutSkillSection gap">
-                      <div class="SkillGraphSection">
-                        <div class="SkillGraph">
-                          <div class="SkillText"></div>
-                        </div>
-                        <span class="SkillNumber Hakgyo TextRight"></span>
-                      </div>
-                      <div class="SkillGraphSection">
-                        <div class="SkillGraph">
-                          <div class="SkillText"></div>
-                        </div>
-                        <span class="SkillNumber Hakgyo TextRight"></span>
-                      </div>
-                      <div class="SkillGraphSection">
-                        <div class="SkillGraph">
-                          <div class="SkillText"></div>
-                        </div>
-                        <span class="SkillNumber Hakgyo TextRight"></span>
-                      </div>
-                      <div class="SkillGraphSection">
-                        <div class="SkillGraph">
-                          <div class="SkillText"></div>
-                        </div>
-                        <span class="SkillNumber Hakgyo TextRight"></span>
-                      </div>
+                  <div class="BoxMain">
+                    <div class="Boxheader">
+                      <button
+                        onclick="SkillButton('JAVA')"
+                        class="SkillBtn MovSansBold"
+                        id="JAVA"
+                      ></button>
+                      <button
+                        onclick="SkillButton('C++')"
+                        class="SkillBtn MovSansBold"
+                        id="C++"
+                      ></button>
+                      <button
+                        onclick="SkillButton('Python')"
+                        class="SkillBtn MovSansBold"
+                        id="Python"
+                      ></button>
+                      <button
+                        onclick="SkillButton('Oracle')"
+                        class="SkillBtn MovSansBold"
+                        id="Oracle"
+                      ></button>
+                    </div>
+                    <div class="AboutSkillSection Lotteria">
+                      <div id="Skillchart"></div>
                     </div>
                   </div>
                 </div>
@@ -358,5 +350,6 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
   </body>
 </html>
