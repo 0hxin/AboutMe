@@ -14,33 +14,26 @@
         <div class="stars"></div>
         <div class="headerWave"></div>
         <div class="headerSection BalooPaaji">
-          <div class="title">
-            <span>About Me</span>
-          </div>
-          <div class="titleName">From&nbsp;Park&nbsp;AeJin</div>
+          <span class="title">MY&nbsp;PAGE</span>
         </div>
       </header>
       <main>
         <section class="fade-wrap" id="ProfileSection">
           <div class="Box">
-            <div class="Boxheader MainBoxHeader BalooPaaji">
-              <div class="HeaderTitle">
-                <span> https:\\Profile </span>
-                <ion-icon
-                  class="TextRight FontLarge"
-                  name="download-outline"
-                ></ion-icon>
-              </div>
-              <div class="headerSubmit gap">
+            <div class="Boxheader MainBoxHeader">
+              <div class="TextRight gap">
                 <button
                   onclick="goToScroll('ProfileSection')"
                   disabled
-                  class="BalooPaaji"
+                  class="BalooPaaji MainheaderBtn"
                 >
-                  Profile
+                  <ion-icon name="person-outline"></ion-icon>Profile
                 </button>
-                <button onclick="goToScroll('AboutSection')" class="BalooPaaji">
-                  About Me
+                <button
+                  onclick="goToScroll('AboutSection')"
+                  class="BalooPaaji MainheaderBtn"
+                >
+                  <ion-icon name="receipt-outline"></ion-icon>About Me
                 </button>
               </div>
             </div>
@@ -71,53 +64,26 @@
               <div class="ProfileInformation">
                 <div class="Box">
                   <div class="Boxheader">
-                    <ion-icon class="FontLarge" name="home"></ion-icon>
-                    <ion-icon class="FontLarge" name="basket"></ion-icon>
-                    <ion-icon class="FontLarge" name="person"></ion-icon>
-                    <ion-icon class="FontLarge" name="bookmarks"></ion-icon>
-                    <ion-icon class="FontLarge" name="list"></ion-icon>
+                    <ion-icon
+                      onclick="informationClick('Profile')"
+                      class="FontLarge InformationBtn"
+                      name="person"
+                      id="Profile"
+                    ></ion-icon>
+                    <ion-icon
+                      onclick="informationClick('Favorite')"
+                      class="FontLarge InformationBtn"
+                      name="heart"
+                      id="Favorite"
+                    ></ion-icon>
+                    <div>
+                      <ion-icon class="FontLarge" name="log-out"></ion-icon>
+                    </div>
                   </div>
                   <div class="BoxMain Hakgyo">
-                    <div class="InformationSection">
-                      <div class="InformationBox">
-                        <img class="InformationImg User" />
-                        <div class="InformationDetail">
-                          <span>박애진</span><span>Park Ae Jin</span>
-                        </div>
-                      </div>
-                      <div class="InformationBox">
-                        <img class="InformationImg Birthday" />
-                        <div class="InformationDetail">
-                          <span>2001.03.13</span>
-                        </div>
-                      </div>
-                      <div class="InformationBox">
-                        <img class="InformationImg School" />
-                        <div class="InformationDetail">
-                          <span>인제대학교 컴퓨터공학부 졸업</span>
-                          <span>2024.02</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="InformationSection2">
-                      <div class="InformationBox">
-                        <img class="InformationImg Game" />
-                        <div class="InformationDetail">
-                          <span>Sims 4</span>
-                        </div>
-                      </div>
-                      <div class="InformationBox">
-                        <img class="InformationImg Music" />
-                        <div class="InformationDetail">
-                          <span>aespa</span>
-                        </div>
-                      </div>
-                      <div class="InformationBox">
-                        <img class="InformationImg Music" />
-                        <div class="InformationDetail">
-                          <span>Sam Smith</span>
-                        </div>
-                      </div>
+                    <div class="InformationSection" id="MyProfile">profile</div>
+                    <div class="InformationSection" id="MyFavorite">
+                      favorite
                     </div>
                   </div>
                 </div>
@@ -214,27 +180,20 @@
         </section>
         <section class="fade-wrap" id="AboutSection">
           <div class="Box">
-            <div class="Boxheader MainBoxHeader BalooPaaji">
-              <div class="HeaderTitle">
-                <span> https:\\AboutMe </span>
-                <ion-icon
-                  class="TextRight FontLarge"
-                  name="download-outline"
-                ></ion-icon>
-              </div>
-              <div class="headerSubmit gap">
+            <div class="Boxheader MainBoxHeader gap">
+              <div class="TextRight gap">
                 <button
                   onclick="goToScroll('ProfileSection')"
-                  class="BalooPaaji"
+                  class="BalooPaaji MainheaderBtn"
                 >
-                  Profile
+                  <ion-icon name="person-outline"></ion-icon>Profile
                 </button>
                 <button
                   onclick="goToScroll('AboutSection')"
-                  class="BalooPaaji"
                   disabled
+                  class="BalooPaaji MainheaderBtn"
                 >
-                  About Me
+                  <ion-icon name="receipt-outline"></ion-icon>About Me
                 </button>
               </div>
             </div>

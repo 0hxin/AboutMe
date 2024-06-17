@@ -21,7 +21,7 @@ targetElements.forEach((element) => {
   observer.observe(element);
 });
 
-// titleName
+// title
 (function ($) {
   $.fn.spanLetters = function () {
     this.each(function () {
@@ -37,7 +37,7 @@ targetElements.forEach((element) => {
     return this;
   };
 })(jQuery);
-$(".titleName").spanLetters();
+$(".title").spanLetters();
 
 // 별 생성 및 반짝이는 효과
 $(document).ready(function () {
@@ -157,6 +157,38 @@ $(function () {
     return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
   }
 });
+// information Btn
+document.addEventListener("DOMContentLoaded", function () {
+  const informationButtons = document.querySelectorAll(".InformationBtn");
+  informationButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const name = this.id;
+      informationClick(name);
+    });
+  });
+  // 페이지가 로드될 때 "Profile" 버튼을 기본으로 클릭된 상태로 설정
+  informationClick("Profile");
+});
+function informationClick(name) {
+  // 선택된 버튼에 스타일 적용
+  const selectedButton = document.getElementById(name);
+  const section = document.getElementById("My" + name);
+  console.log(section);
+  const informationSections = document.querySelectorAll(".InformationSection");
+  const informationButtons = document.querySelectorAll(".InformationBtn");
+
+  // 모든 버튼의 클래스 제거
+  informationButtons.forEach((button) => {
+    button.classList.remove("Click");
+  });
+  // 모든 섹션을 숨김 처리
+  informationSections.forEach((div) => {
+    div.style.display = "none";
+  });
+  // 선택된 버튼에 클래스 추가 및 해당 섹션 표시
+  selectedButton.classList.add("Click");
+  section.style.display = "block";
+}
 // img 태그 경로설정
 $(document).ready(function () {
   $(".User").attr("src", "images/user.png");
@@ -175,16 +207,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // 페이지가 로드될 때 "JAVA" 버튼을 기본으로 클릭된 상태로 설정
   SkillButton("JAVA");
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-  const skillButtons = document.querySelectorAll(".SkillBtn");
-  skillButtons.forEach((button) => {
-    button.innerHTML = button.id;
-  });
-  // 페이지가 로드될 때 "JAVA" 버튼을 기본으로 클릭된 상태로 설정
-  SkillButton("JAVA");
-});
-
 function SkillButton(name) {
   const SkillStyles = {
     JAVA: {
@@ -237,13 +259,13 @@ function SkillButton(name) {
 function drawDonutChart(percentage, color, textColor, text) {
   const ChartSection = document.getElementsByClassName("AboutSkillSection")[0];
   const width = ChartSection.clientWidth;
-  const height = ChartSection.clientWidth;
+  const height = ChartSection.clientHeight;
 
   console.log("Width: ", width, "Height: ", height); // 크기 확인을 위한 로그
 
   // 기존 차트를 제거
   d3.select("#Skillchart").selectAll("*").remove();
-  const radius = width / 2;
+  const radius = Math.min(width, height) / 2;
 
   const svg = d3
     .select("#Skillchart")
@@ -307,32 +329,4 @@ function drawDonutChart(percentage, color, textColor, text) {
         that.text(Math.round(i(t)) + "%");
       };
     });
-  // 차트 아래에 텍스트 추가
-  const textElement = svg
-    .append("text")
-    .attr("text-anchor", "middle")
-    .attr("font-size", fontSize + "px") // 반응형 폰트 크기
-    .attr("font-family", "LOTTERIACHAB") // 글씨체 설정
-    .attr("dy", radius + 5) // 차트 아래에 위치
-    .attr("fill", "white");
-
-  textElement
-    .append("tspan")
-    .attr("fill", "white")
-    .attr(
-      "style",
-      `text-shadow: -1px 0px 0 ${color}, 1px 0px 0 ${color}, 0px -1px 0 ${color}, 0px 1px 0 ${color};`
-    )
-    .text("My ");
-
-  textElement.append("tspan").attr("fill", color).text(text);
-
-  textElement
-    .append("tspan")
-    .attr("fill", "white")
-    .attr(
-      "style",
-      `text-shadow: -1px 0px 0 ${color}, 1px 0px 0 ${color}, 0px -1px 0 ${color}, 0px 1px 0 ${color};`
-    )
-    .text(" Skills");
 }
