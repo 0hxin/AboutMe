@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="stars"></div>
+        <div class="headerWave"></div>
+        <div class="headerSection BalooPaaji">
+          <span class="title">MY&nbsp;PAGE</span>
+        </div>
+      </header>
+      <main>
+        <section class="fade-wrap" id="ProfileSection">
+          <div class="Box">
+            <div class="Boxheader MainBoxHeader">
+              <div class="TextRight gap">
+                <button
+                  onclick="goToScroll('ProfileSection')"
+                  disabled
+                  class="BalooPaaji MainheaderBtn"
+                >
+                  <ion-icon name="person-outline"></ion-icon>Profile
+                </button>
+                <button
+                  onclick="goToScroll('AboutSection')"
+                  class="BalooPaaji MainheaderBtn"
+                >
+                  <ion-icon name="receipt-outline"></ion-icon>About Me
+                </button>
+              </div>
+            </div>
+            <div class="BoxMain BoxSection">
+              <div class="SectionTitle">
+                <div class="Box">
+                  <div class="Boxheader"></div>
+                  <div class="BoxMain Lotteria">
+                    <div class="TitleMain">My Profile</div>
+                  </div>
+                </div>
+              </div>
+              <div class="ProfilePhoto">
+                <div class="Box">
+                  <div class="Boxheader BalooPaaji">
+                    <span>AirDrop</span>
+                    <span>AeJin would like to share a photo.</span>
+                  </div>
+                  <div class="BoxMain FontLarge">
+                    <div class="ProfileImg"></div>
+                    <div class="ProfileText BalooPaaji">
+                      <span>Decline</span>
+                      <span>Accept</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ProfileInformation">
+                <div class="Box">
+                  <div class="Boxheader">
+                    <ion-icon
+                      class="FontLarge TextLeft"
+                      name="chevron-back-outline"
+                    ></ion-icon>
+                    <ion-icon
+                      onclick="informationClick('Profile')"
+                      class="FontLarge InformationBtn"
+                      name="person"
+                      id="Profile"
+                    ></ion-icon>
+                    <ion-icon
+                      onclick="informationClick('Favorite')"
+                      class="FontLarge InformationBtn"
+                      name="heart"
+                      id="Favorite"
+                    ></ion-icon>
+                  </div>
+                  <div class="BoxMain Hakgyo gap">
+                    <div class="InformationSection gap" id="MyProfile">
+                      <div class="InformationTitle TextLeft">
+                        <span>Name</span>
+                      </div>
+                      <div class="InformationDetail TextRight">
+                        <span>박애진, Park Ae Jin</span>
+                      </div>
+                      <div class="InformationTitle TextLeft">
+                        <span>Birthday</span>
+                      </div>
+                      <div class="InformationDetail TextRight">
+                        <span>2001.03.13</span>
+                      </div>
+                      <div class="InformationTitle TextLeft InformationCircle">
+                        <span>●</span>
+                        <span>●</span>
+                        <span>●</span>
+                      </div>
+                    </div>
+                    <div class="InformationSection gap" id="MyFavorite">
+                      <div class="InformationTitle TextLeft">
+                        <span>My Favorite Game</span>
+                      </div>
+                      <div class="InformationDetail TextRight">
+                        <span>Sims 4, Hogwarts Legacy</span>
+                      </div>
+                      <div class="InformationTitle TextLeft">
+                        <span>My Favorite Book</span>
+                      </div>
+                      <div class="InformationDetail TextRight">
+                        <span>Harry Porter, The Hunger Games</span>
+                      </div>
+                      <div class="InformationTitle TextLeft InformationCircle">
+                        <span>●</span>
+                        <span>●</span>
+                        <span>●</span>
+                      </div>
+                    </div>
+                    <div class="InformationFooter">
+                      <span>메시지 보내기..</span>
+                      <div class="TextRight gap">
+                        <ion-icon name="mic-outline"></ion-icon>
+                        <ion-icon name="image-outline"></ion-icon>
+                        <ion-icon name="add-circle-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ProfileSNS">
+                <div class="Box">
+                  <div class="Boxheader gap BalooPaaji">
+                    <span>gfedcbaejin</span>
+                    <ion-icon
+                      class="FontLarge"
+                      name="chevron-down-outline"
+                    ></ion-icon>
+                  </div>
+                  <div class="BoxMain Lotteria gap">
+                    <a href="https://www.instagram.com/gfedcbaejin">
+                      <div class="SnsHeader gap">
+                        <div class="SnsImg">
+                          <img src="images/Insta.jpg" />
+                        </div>
+                        <div class="SnsHeaderDetail">
+                          <span class="SnsNumber FontLarge">295</span>
+                          <span class="SnsText">Followers</span>
+                          <span class="SnsNumber FontLarge">144</span>
+                          <span class="SnsText">Following</span>
+                        </div>
+                      </div>
+                      <div class="SnsBtn gap">
+                        <span class="SnsID FontLarge">gfedcbaejin</span>
+                        <span class="SnsDetail">박애진</span>
+                        <button>Follow</button>
+                        <button>Message</button>
+                        <button class="SnsIconBtn">
+                          <ion-icon name="people-outline"></ion-icon>
+                        </button>
+                        <div class="Snsfooter gap">
+                          <ion-icon name="grid-outline"></ion-icon>
+                          <ion-icon name="camera-outline"></ion-icon>
+                          <ion-icon name="people-outline"></ion-icon>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="ProfileMusic Hakgyo">
+                <div class="Box">
+                  <div class="Boxheader">
+                    <ion-icon
+                      name="reorder-three-outline"
+                      class="TextLeft MusicHeaderBtn FontLarge"
+                    ></ion-icon>
+                    <span class="FontLarge">Music</span>
+                    <ion-icon
+                      name="radio-outline"
+                      class="TextRight MusicHeaderBtn FontLarge"
+                    ></ion-icon>
+                  </div>
+                  <div class="BoxMain">
+                    <div class="MusicSection gap">
+                      <div id="audioImg"></div>
+                      <div class="myAudio gap">
+                        <div class="musicVolume gap">
+                          <input
+                            type="range"
+                            id="audioBar"
+                            min="0"
+                            max="100"
+                            value="0"
+                          />
+                          <span id="currentTime">0:00</span>
+                          <span id="durationTime">0:00</span>
+                        </div>
+                        <div class="musicBtn gap">
+                          <button id="audioHeart" class="FontLarge">
+                            <ion-icon name="heart-outline"></ion-icon>
+                          </button>
+                          <button id="audioPlay">
+                            <ion-icon name="caret-forward-outline"></ion-icon>
+                          </button>
+                          <button id="audioVolumn">
+                            <ion-icon
+                              name="volume-medium"
+                              class="FontLarge"
+                            ></ion-icon>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="fade-wrap" id="AboutSection">
+          <div class="Box">
+            <div class="Boxheader MainBoxHeader gap">
+              <div class="TextRight gap">
+                <button
+                  onclick="goToScroll('ProfileSection')"
+                  class="BalooPaaji MainheaderBtn"
+                >
+                  <ion-icon name="person-outline"></ion-icon>Profile
+                </button>
+                <button
+                  onclick="goToScroll('AboutSection')"
+                  disabled
+                  class="BalooPaaji MainheaderBtn"
+                >
+                  <ion-icon name="receipt-outline"></ion-icon>About Me
+                </button>
+              </div>
+            </div>
+            <div class="BoxMain BoxSection">
+              <div class="SectionTitle">
+                <div class="Box">
+                  <div class="Boxheader"></div>
+                  <div class="BoxMain Lotteria">
+                    <div class="TitleMain">About Me</div>
+                  </div>
+                </div>
+              </div>
+              <div class="AboutMeHistory">
+                <div class="Box">
+                  <div class="Boxheader PurpleHeader BalooPaaji gap">
+                    <span class="TextLeft">History</span>
+                    <ion-icon class="FontLarge" name="move-outline"></ion-icon>
+                    <ion-icon
+                      class="FontLarge"
+                      name="chatbubbles-outline"
+                    ></ion-icon>
+                  </div>
+                  <div class="BoxMain Hakgyo">
+                    <div class="HistorySection">
+                      <span class="Year MovSansBold">2020</span>
+                      <span class="HistoryText">인제대학교 컴공 입학</span>
+                      <span class="Year MovSansBold">2021</span>
+                      <span class="HistoryText">과 학생회 홍보차장</span>
+                      <span class="HistoryText">학술 동아리 AUG 가입</span>
+                      <span class="HistoryText">SE-LAB 연구원</span>
+                      <span class="Year MovSansBold">2022</span>
+                      <span class="HistoryText">단과대학 학생회 홍보국장</span>
+                    </div>
+                    <div class="HistorySection2">
+                      <span class="Year MovSansBold">2022</span>
+                      <span class="HistoryText">학술 동아리 AUG 팀장</span>
+                      <span class="HistoryText">SE-LAB 연구장</span>
+                      <span class="Year MovSansBold">2023</span>
+                      <span class="HistoryText">단과대학 학생회 홍보국장</span>
+                      <span class="Year MovSansBold">2024</span>
+                      <span class="HistoryText">인제대학교 컴공 졸업</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="AboutSkill">
+                <div class="Box">
+                  <div class="Blur">
+                    <div class="Boxheader SkillTitle Hakgyo">
+                      <span>My Skill Graph</span>
+                      <span id="currentSkill">JAVA</span>
+                    </div>
+                    <div class="BoxMain">
+                      <div class="AboutSkillSection Lotteria">
+                        <div id="Skillchart"></div>
+                      </div>
+                    </div>
+                    <div class="Boxheader">
+                      <div class="SkillButtons">
+                        <button
+                          onclick="changeSkill('before')"
+                          class="Hakgyo TextLeft"
+                        >
+                          <ion-icon name="caret-back-outline"></ion-icon>
+                        </button>
+                        <div>
+                          <span id="JAVA" class="SkillBtnSpan">1</span>
+                          <span id="Python" class="SkillBtnSpan">2</span>
+                          <span id="C++" class="SkillBtnSpan">3</span>
+                          <span id="Oracle" class="SkillBtnSpan">4</span>
+                        </div>
+                        <button
+                          onclick="changeSkill('next')"
+                          class="Hakgyo TextRight"
+                        >
+                          <ion-icon name="caret-forward-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="AboutSkill2">
+                <div class="Box">
+                  <div class="Boxheader"></div>
+                  <div class="BoxMain Lotteria">
+                    <div class="SkillMenu"></div>
+                    <div class="SkillLink">
+                      <a href="#">
+                        <span>Git Hub</span>
+                        <img class="SkillGit" />
+                      </a>
+                      <a href="#">
+                        <span>Baek Joon</span>
+                        <img class="SkillBaek" />
+                      </a>
+                      <a href="#">
+                        <span>Tistory</span>
+                        <img class="SkillTistory" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div class="fade-wrap"></div>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+  </body>
+</html>
