@@ -1,377 +1,415 @@
 @import "https://fonts.googleapis.com/css?family=Baloo+Paaji";
 @font-face {
-  font-family: "MoveSans-Bold";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/MoveSans-Bold.woff2")
-    format("woff2");
-  font-weight: 700;
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "HakgyoansimWoojuR";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2")
+  font-family: "Tenada";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Tenada.woff2")
     format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "LOTTERIACHAB";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2")
-    format("woff2");
+  font-family: "GowunBatang-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 /* 세로모드 모바일 디바이스 (가로 해상도가 576px 보다 작은 화면에 적용) */
 @media (max-width: 575px) {
-  section .Boxheader,
-  .myAudio span,
-  .SkillButtons button {
+  .photoHeader,
+  .photoIcon span,
+  .historyYear::before,
+  .instaHeader .Pretend {
+    font-size: 8px;
+  }
+  .skillName {
     font-size: 10px;
   }
-  .FontLarge {
+  .musicHeader span:nth-of-type(1),
+  .musicBar,
+  .musicVolume,
+  .photoIcon i,
+  .instaBody,
+  .skillHeader,
+  .skillTitle {
+    font-size: 12px;
+  }
+  .profileHeader i {
     font-size: 15px;
   }
-  .BoxSection {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 0.5fr 1fr 1.5fr;
+  .historyHeader,
+  .historyDetail {
+    font-size: 17px;
   }
-  /* none */
-  .ProfileSNS {
-    display: none;
-  }
-  /* main-Profile, Title */
-  .SectionTitle {
-    grid-column: 1/3;
-    grid-row: 1/2;
-  }
-  .TitleMain {
-    font-size: 40px;
-  }
-  /* main-Profile, photo / main-AboutMe, Skill */
-  .ProfilePhoto,
-  .AboutSkill {
-    grid-column: 1/2;
-    grid-row: 2/3;
-  }
-  .ProfilePhoto .Boxheader span:nth-child(2) {
-    font-size: 9px;
-  }
-  .SkillButtons span {
-    font-size: 7px;
-  }
-  /* main-Profile, music / main-AboutMe, Skill2 */
-  .ProfileMusic,
-  .AboutSkill2 {
-    grid-column: 2/3;
-    grid-row: 2/3;
-  }
-  #audioPlay {
+  .headerText .headerTitle:nth-of-type(1),
+  #currentDate,
+  .historyYear {
     font-size: 20px;
   }
-  /* main-Profile, Information / main-AboutMe, Histor */
-  .ProfileInformation,
-  .AboutMeHistory {
-    grid-column: 1/3;
-    grid-row: 3/4;
+  .profileHeader span {
+    font-size: 35px;
+  }
+  .titleSize {
+    font-size: 55px;
+  }
+  .timeBoxNowTime {
+    font-size: 65px;
+  }
+  /* header */
+  .musicBtn button {
+    width: 30px;
+    font-size: 20px;
+    margin: 0px 5px;
+  }
+  .musicImg {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  /* main */
+  .myPageApp {
+    height: 40px;
+    width: 40px;
+    font-size: 25px;
+  }
+  .historyImg {
+    height: 195px;
+  }
+  .profileTitle i {
+    width: 25px;
+    height: 25px;
   }
 }
 
 /* 가로모드 모바일 디바이스 (가로 해상도가 576px보다 크고 768px 보다 작은 화면에 적용)  */
 @media (min-width: 576px) and (max-width: 767px) {
-  section .Boxheader,
-  .myAudio span,
-  .InformationSection {
+  .photoHeader,
+  .profileHeader i,
+  .photoFooter span,
+  .skillName {
+    font-size: 5px;
+  }
+  .photoFooter i {
+    font-size: 7px;
+  }
+  .historyYear::before,
+  .skillHeader,
+  .skillTitle {
     font-size: 8px;
   }
-  .FontLarge {
-    font-size: 13px;
+  .musicHeader span:nth-of-type(1),
+  .musicBar,
+  .musicVolume,
+  .instaBody,
+  .appFooter,
+  .historyHeader,
+  .historyDetail,
+  .profileSection .glowBox {
+    font-size: 10px;
   }
-  .BoxSection {
-    grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
-    grid-template-rows: 1fr 1.3fr;
+  .historyYear {
+    font-size: 12px;
   }
-  /* none */
-  .ProfileSNS {
-    display: none;
+  #currentDateMonth,
+  .profileHeader span {
+    font-size: 15px;
   }
-  /* main-Profile, Title */
-  .SectionTitle {
-    grid-column: 1/3;
-    grid-row: 1/2;
-  }
-  .TitleMain {
-    font-size: 30px;
-  }
-  /* main-Profile, photo */
-  .ProfilePhoto {
-    grid-column: 3/4;
-    grid-row: 1/2;
-  }
-  .ProfilePhoto .Boxheader span:nth-child(2),
-  .InformationFooter {
-    font-size: 6px;
-  }
-  /* main-Profile, Music / main-AboutMe, History */
-  .ProfileMusic,
-  .AboutMeHistory {
-    grid-column: 4/5;
-    grid-row: 1/3;
-  }
-  #audioPlay {
+  .musicHeader,
+  .headerText .headerTitle:nth-of-type(1) {
     font-size: 20px;
   }
-  /* main-Profile, Information */
-  .ProfileInformation {
-    grid-column: 1/4;
-    grid-row: 2/3;
+  #currentTime {
+    font-size: 50px;
   }
-  /* main-AboutMe */
-  #AboutSection .SectionTitle {
-    grid-row: 1/2;
-    grid-column: 1/4;
+  .titleSize {
+    font-size: 65px;
   }
-  /* main-AboutMe, Skill */
-  .AboutSkill {
-    grid-row: 2/3;
-    grid-column: 1/2;
+  /* header */
+  .musicBtn button {
+    width: 30px;
+    font-size: 20px;
+    margin: 0px 5px;
   }
-  .SkillBtn {
-    font-size: 4px;
+  .musicImg {
+    width: 80px !important;
+    height: 80px !important;
   }
-  /* main-AboutMe, Skill2 */
-  .AboutSkill2 {
-    grid-row: 2/3;
-    grid-column: 2/4;
+  /* main */
+  header,
+  main,
+  footer,
+  .mainBody,
+  .glowBox,
+  .borderBox {
+    padding: 5px !important;
+  }
+  .mainBody {
+    gap: 10px !important;
+  }
+  .borderBox,
+  .notPaddingBox,
+  .glowBox,
+  .appBody,
+  .historyMain {
+    gap: 5px !important;
+  }
+  .profileSection .glowBox {
+    gap: 3px !important;
+  }
+  .myPageApp {
+    height: 35px;
+    width: 35px;
+    font-size: 20px;
+  }
+  .profileTitle i {
+    width: 15px;
+    height: 15px;
+  }
+  .instaHeader .Pretend,
+  .histroyImg {
+    display: none !important;
   }
 }
 
 /*태블릿 디바이스 (가로 해상도가 768px보다 크고 991px 보다 작은 화면에 적용)  */
 @media (min-width: 768px) and (max-width: 991px) {
-  section .Boxheader,
-  .myAudio span {
-    font-size: 11px;
+  .photoHeader,
+  .photoFooter span,
+  .historyYear::before {
+    font-size: 10px;
   }
-  .FontLarge {
+  .appFooter,
+  .photoFooter i,
+  .instaHeader .Pretend,
+  .historyHeader,
+  .skillName {
+    font-size: 15px;
+  }
+  .skillTitle {
+    font-size: 17px;
+  }
+  .musicHeader span:nth-of-type(1),
+  .musicVolume,
+  .instaBody,
+  .historyDetail,
+  .profileSection .borderBox,
+  .skillHeader {
     font-size: 20px;
   }
-  .BoxSection {
-    grid-template-columns: 0.4fr 0.6fr;
-    grid-template-rows: 1fr 1fr 0.5fr 0.5fr 1fr;
-  }
-  /* main-Profile, Title */
-  .SectionTitle {
-    grid-column: 1/3;
-    grid-row: 1/2;
-  }
-  .TitleMain {
-    font-size: 80px;
-  }
-  /* main-Profile, photo */
-  .ProfilePhoto {
-    grid-column: 1/2;
-    grid-row: 2/3;
-  }
-  .ProfilePhoto .Boxheader span:nth-child(1) {
-    font-size: 15px;
-  }
-  /* main-Profile, Music */
-  .ProfileMusic {
-    grid-column: 1/2;
-    grid-row: 3/6;
-  }
-  #audioPlay {
+  .historyYear {
     font-size: 25px;
   }
-  /* main-Profile, Information */
-  .ProfileInformation {
-    grid-column: 2/3;
-    grid-row: 2/4;
-  }
-  /* main-Profile, SNS */
-  .ProfileSNS {
-    grid-column: 2/3;
-    grid-row: 4/6;
-  }
-  .SnsText,
-  .SnsDetail {
-    font-size: 15px;
-  }
-  .Snsfooter {
+  .musicHeader,
+  .headerText .headerTitle:nth-of-type(1) {
     font-size: 30px;
   }
-  /* main-AboutMe */
-  /* main-AboutMe, History */
-  .AboutMeHistory {
-    grid-row: 4/7;
-    grid-column: 1/3;
+  #currentDate,
+  .profileHeader span {
+    font-size: 45px;
   }
-  /* main-AboutMe, Skill */
-  .AboutSkill {
-    grid-row: 2/4;
-    grid-column: 2/3;
+  .titleSize,
+  .timeBoxNowTime {
+    font-size: 75px;
   }
-  /* main-AboutMe, Skill2 */
-  .AboutSkill2 {
-    grid-row: 2/4;
-    grid-column: 1/2;
+  /* header */
+  .musicBar span {
+    font-size: 18px;
+  }
+  .musicBtn button {
+    width: 35px;
+    font-size: 30px;
+    margin: 0px 8px;
+  }
+  /* main */
+  .mainPageToggle {
+    width: 150px !important;
+    height: 30px !important;
+  }
+  .pageBtn {
+    width: 25px !important;
+    height: 25px !important;
+  }
+  .pageBtn.movePage {
+    transform: translateX(115px) !important;
+  }
+  .myPageApp {
+    height: 50px;
+    width: 50px;
+    font-size: 35px;
+  }
+  .historyImg {
+    height: 230px;
+  }
+  .profileTitle i {
+    width: 35px;
+    height: 35px;
   }
 }
 
 /* 데스크탑 (가로 해상도가 992px보다 크고 1199px 보다 작은 화면에 적용)  */
 @media (min-width: 992px) and (max-width: 1199px) {
-  section .Boxheader,
-  .myAudio span,
-  .SnsText,
-  .SnsDetail {
-    font-size: 12px;
+  .photoHeader,
+  .photoFooter span,
+  .historyHeader,
+  .historyYear::before,
+  .profileHeader i,
+  .skillName {
+    font-size: 8px;
   }
-  .FontLarge {
-    font-size: 17px;
-  }
-  .BoxSection {
-    grid-template-columns: 1fr 1fr 0.5fr 0.5fr 1fr;
-    grid-template-rows: 1fr 1.5fr;
-  }
-  /* main-Profile, Title */
-  .SectionTitle {
-    grid-column: 2/6;
-    grid-row: 1/2;
-  }
-  .TitleMain {
-    font-size: 80px;
-  }
-  /* main-Profile, Photo */
-  .ProfilePhoto {
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-  .ProfilePhoto .Boxheader span:nth-child(1),
-  .InformationFooter {
-    font-size: 15px;
-  }
-  /* main-Profile, music */
-  .ProfileMusic {
-    grid-column: 1/2;
-    grid-row: 2/3;
-  }
-  #audioPlay {
-    font-size: 25px;
-  }
-  /* main-Profile, Information */
-  .ProfileInformation {
-    grid-column: 2/4;
-    grid-row: 2/3;
-  }
-  /* main-Profile, SNS */
-  .ProfileSNS {
-    grid-column: 4/6;
-    grid-row: 2/3;
-  }
-  .Snsfooter {
-    font-size: 20px;
-  }
-  /* main-AboutMe */
-  #AboutSection .SectionTitle {
-    grid-column: 1/4;
-    grid-row: 1/2;
-  }
-  /* main-AboutMe, History */
-  .AboutMeHistory {
-    grid-column: 4/6;
-    grid-row: 1/3;
-  }
-  /* main-AboutMe, Skill */
-  .AboutSkill {
-    grid-column: 2/4;
-    grid-row: 2/3;
-  }
-  .SkillBtn {
+  .skillTitle {
     font-size: 10px;
   }
-  /* main-AboutMe, Skill2 */
-  .AboutSkill2 {
-    grid-column: 1/2;
-    grid-row: 2/3;
+  .appFooter,
+  .photoFooter i,
+  .instaHeader .Pretend,
+  .historyDetail,
+  .skillHeader {
+    font-size: 12px;
+  }
+  .profileSection .glowBox,
+  .historyYear {
+    font-size: 15px;
+  }
+  .musicBar span,
+  .musicVolume,
+  .instaBody,
+  .profileHeader span {
+    font-size: 20px;
+  }
+  .musicHeader span:nth-child(1),
+  #currentDateMonth {
+    font-size: 25px;
+  }
+  .musicHeader {
+    font-size: 35px;
+  }
+  .headerText .headerTitle:nth-of-type(1) {
+    font-size: 40px;
+  }
+  #currentTime {
+    font-size: 75px;
+  }
+  .titleSize {
+    font-size: 85px;
+  }
+  /* header */
+  .musicBtn button {
+    width: 40px;
+    font-size: 35px;
+    margin: 0px 9px;
+  }
+  /* main */
+  .myPageApp {
+    height: 45px;
+    width: 45px;
+    font-size: 30px;
+  }
+  .historyImg {
+    height: 70px;
+  }
+  .profileSection .glowBox {
+    padding: 10px !important;
+  }
+  .profileTitle i {
+    width: 20px;
+    height: 20px;
+  }
+  .profileSection .borderBox {
+    gap: 5px !important;
   }
 }
 
 /* 큰화면 데스크탑 (가로 해상도가 1200px 보다 큰 화면에 적용)  */
 @media (min-width: 1200px) {
-  section .Boxheader,
-  .myAudio span {
-    font-size: 12px;
+  .photoHeader,
+  .photoFooter span,
+  .historyHeader,
+  .historyYear::before,
+  .profileHeader i {
+    font-size: 10px;
   }
-  .FontLarge {
-    font-size: 27px;
+  .appFooter,
+  .photoFooter i,
+  .instaHeader .Pretend,
+  .historyDetail,
+  .profileSection .borderBox,
+  .skillName {
+    font-size: 16px;
   }
-  .BoxSection {
-    grid-template-columns: 1fr 1fr 0.5fr 0.5fr 1fr;
-    grid-template-rows: 1fr 1.5fr;
-  }
-  /* main-Profile, Title */
-  .SectionTitle {
-    grid-column: 2/6;
-    grid-row: 1/2;
-  }
-  .TitleMain {
-    font-size: 90px;
-  }
-  /* main-Porfile, Photo */
-  .ProfilePhoto {
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-  .ProfilePhoto .Boxheader span:nth-child(1),
-  .InformationFooter {
-    font-size: 19px;
-  }
-  /* main-Profile, music */
-  .ProfileMusic {
-    grid-column: 1/2;
-    grid-row: 2/3;
-  }
-  #audioPlay {
-    font-size: 30px;
-  }
-  /* main-Profile, Information */
-  .ProfileInformation {
-    grid-column: 2/4;
-    grid-row: 2/3;
-  }
-  .InformationSection,
-  .SnsText,
-  .SnsDetail,
-  .SnsBtn button {
+  .historyYear,
+  .skillHeader,
+  .skillTitle {
     font-size: 20px;
   }
-  /* main-Profile, SNS */
-  .ProfileSNS {
-    grid-column: 4/6;
-    grid-row: 2/3;
+  .musicBar span,
+  .musicVolume,
+  .instaBody {
+    font-size: 25px;
   }
-  .Snsfooter {
+  .musicHeader span:nth-child(1),
+  #currentDateMonth,
+  .profileHeader span {
+    font-size: 30px;
+  }
+  .headerText .headerTitle:nth-of-type(1),
+  .musicHeader {
+    font-size: 45px;
+  }
+  .titleSize,
+  #currentTime {
+    font-size: 90px;
+  }
+  /* header */
+  .musicBtn button {
+    width: 45px;
     font-size: 40px;
+    margin: 0px 9px;
   }
-  /* main-AboutMe */
-  #AboutSection .SectionTitle {
-    grid-column: 1/4;
-    grid-row: 1/2;
+  .musicImg {
+    width: 200px !important;
+    height: 200px !important;
   }
-  /* main-AboutMe, History */
-  .AboutMeHistory {
-    grid-column: 4/6;
-    grid-row: 1/3;
+  /* main */
+  .myPageApp {
+    height: 50px;
+    width: 50px;
+    font-size: 35px;
   }
-  /* main-AboutMe, Skill */
-  .AboutSkill {
-    grid-column: 2/4;
-    grid-row: 2/3;
+  .historyImg {
+    height: 150px;
   }
-  /* main-AboutMe, Skill2 */
-  .AboutSkill2 {
-    grid-column: 1/2;
-    grid-row: 2/3;
+  .profileTitle i {
+    width: 25px;
+    height: 25px;
+  }
+  /* footer toggle */
+  .toggleBox {
+    width: 500px;
+    height: 100px;
+  }
+  .toggleBtn {
+    width: 60px;
+    height: 60px;
+  }
+  .toggleText {
+    font-size: 30px;
+  }
+  /* move */
+  footer input:checked + .toggleSwitch .toggleBtn {
+    transform: translateX(410px);
   }
 }
+
+/* 스크롤바 안보이게 */
+::-webkit-scrollbar {
+  display: none;
+}
+
 * {
   /* 드래그나 더블클릭 시 텍스트 선택 x */
   -webkit-user-select: none;
@@ -380,614 +418,599 @@
   user-select: none;
   outline: 0;
   box-sizing: border-box;
-}
-html,
-body {
-  scroll-behavior: smooth;
-  padding: 0;
   margin: 0;
-  background: linear-gradient(to bottom, #dae2f8, #d6a4a4);
+  padding: 0;
+  line-height: 1;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* 배경 이미지 고정 */
+body {
+  background: url("images/background2.jpg") no-repeat center/cover;
+  background-attachment: fixed;
 }
 header,
-footer,
-section {
+main,
+footer {
+  width: 100vw;
   height: 100vh;
+  padding: 1em 1em;
   overflow: hidden;
   display: flex;
   justify-content: center;
-}
-header {
-  flex-direction: column;
-  text-align: center;
-}
-section {
   align-items: center;
-  padding: 2em;
 }
-/* 스크롤바 안보이게 */
-::-webkit-scrollbar {
-  display: none;
-}
-/* 부드러운 스크롤 */
-.fade-wrap {
-  transition: 2s;
-  opacity: 0;
-  position: relative;
-  left: -30%;
-}
-.fade-wrap.fade-in {
-  opacity: 1;
-  left: 0;
-}
-/* font */
+/* 글꼴 */
 .BalooPaaji {
   font-family: "Baloo Paaji";
 }
-.MovSansBold {
-  font-family: "MoveSans-Bold";
+.Pretend {
+  font-family: "Pretendard-Regular";
 }
-.Lotteria {
-  font-family: "LOTTERIACHAB";
+.Tenada {
+  font-family: "Tenada";
 }
-.Hakgyo {
-  font-family: "HakgyoansimWoojuR";
+.Gow {
+  font-family: "GowunBatang-Regular";
 }
-/* left, right */
-.TextLeft {
-  margin-right: auto;
-}
-.TextRight {
-  margin-left: auto;
-}
-/* header */
-.headerWave {
-  background: url("images/headerWave.svg");
-  height: 100%;
-  width: 100%;
-  top: 0;
-  background-size: cover;
-  position: absolute;
-}
-.headerSection {
-  position: relative;
-  color: white;
-  white-space: nowrap;
-}
-.title {
-  font-size: 15vw;
-}
-.title span {
-  display: inline-block;
-  position: relative;
-  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  transition: 0.8s;
-}
-.title span:nth-child(odd) {
-  transform: rotateX(10deg) rotateY(10deg) rotateZ(370deg);
-}
-.title span:nth-child(even) {
-  transform: rotateX(10deg) rotateY(10deg) rotateZ(-370deg);
-}
-.title:hover span:nth-child(odd) {
-  transform: rotateX(10deg) rotateY(10deg) rotateZ(-370deg);
-}
-.title:hover span:nth-child(even) {
-  transform: rotateX(10deg) rotateY(10deg) rotateZ(370deg);
-}
-/* header - 별빛 효과 */
-.stars {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-.star {
-  position: absolute;
-  background: white;
-  border-radius: 50%;
-  opacity: 0;
-  animation: twinkle 3s infinite;
-}
-/* header background */
-@keyframes twinkle {
-  0%,
-  100% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-}
-/* gap */
-.gap {
-  gap: 0.5em;
-}
-/* main-Box */
-.Box,
-.Boxheader,
-.BoxMain {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  padding: 0.5em;
-  border: none;
-  z-index: 2;
-}
-.Box {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  border-radius: 0.5em;
-  padding: 0;
-  background-color: rgba(255, 255, 255, 0.74);
-  position: relative;
-}
-.BoxMain {
-  align-content: center;
-}
-.Boxheader {
-  justify-items: center;
-  align-items: center;
-  display: flex;
-}
-/* main-BoxHeader btn */
-.MainBoxHeader {
-  background-color: white;
-  display: grid;
-  grid-template-columns: 1fr 1fr auto;
-  padding: 0.5em 0.5em 0em 0.5em;
-}
-.MainheaderBtn {
-  color: rgb(122, 122, 122);
-}
-.MainBoxHeader .TextRight {
-  grid-column: 3/4;
-}
-.MainheaderBtn {
-  cursor: pointer;
-  border: none;
-  border-bottom: 2px solid white;
-  background-color: transparent;
-  transition: all 0.3s ease-in;
-}
-.MainheaderBtn:hover:not(:disabled),
-.MainheaderBtn:disabled {
-  color: #9b86b1;
-  border-bottom: 2px solid #9b86b1;
-}
-.MainheaderBtn:disabled {
-  cursor: default;
-}
-/* main-Section */
-.BoxSection {
-  display: grid;
-  gap: 0.5em;
-}
-/* main-Profile, Title */
-.SectionTitle .Box {
-  background: url("images/Cloudy.svg") bottom/cover no-repeat;
-}
-.SectionTitle .BoxMain {
-  align-self: center;
-}
-.TitleMain {
-  text-align: center;
-  color: white;
-  -webkit-text-stroke: 1px black;
-  font-style: italic;
-}
-/* main-Profile, Photo */
-.ProfilePhoto .Boxheader {
-  padding: 0.2em;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  text-wrap: nowrap;
-}
-.ProfilePhoto .Boxheader span:nth-child(1) {
-  margin-bottom: -0.5em;
-}
-.ProfilePhoto .BoxMain {
-  display: grid;
-  grid-template-rows: 1fr auto;
-  padding: 0;
-}
-.ProfileImg {
-  background: url("images/KakaoTalk_20230610_133225528.jpg") center/cover
-    no-repeat;
-}
-.ProfileText {
-  color: #a8b4e1;
-  grid-row: 2/3;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  text-align: center;
-}
-.ProfileText span:nth-child(1) {
-  border-right: 1px solid #a8b4e1;
-}
-/* main-Profile, Information */
-.ProfileInformation .Box {
-  background-color: #bea7bd;
-  color: white;
-}
-.ProfileInformation .BoxMain {
-  border-top-left-radius: 1.5em;
-  border-top-right-radius: 1.5em;
-  background-color: white;
-  text-wrap: nowrap;
-  display: grid;
-  grid-template-rows: 1fr auto;
-}
-.InformationBtn {
-  color: #af91ad;
-  cursor: pointer;
-  padding: 0.5em;
-  transition: all 0.3s;
-}
-.InformationBtn.Click,
-.InformationBtn:hover:not(.Click) {
-  color: white;
-}
-.InformationSection {
-  flex-direction: column;
-  align-self: center;
-}
-.InformationTitle,
-.InformationDetail,
-.InformationFooter {
-  padding: 0.5em;
-  border-radius: 1.5em;
-  color: white;
-}
-.InformationTitle {
-  background-color: #beb7d5;
-}
-.InformationDetail {
-  background-color: #ffb1b2;
-}
-.InformationCircle span {
-  display: inline-block;
-  position: relative;
-  animation: Bounce 0.8s alternate linear infinite;
-}
-.InformationCircle span:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.InformationCircle span:nth-child(3) {
-  animation-delay: 0.4s;
-}
-@keyframes Bounce {
-  from {
-    transform: scale(0.8);
-  }
-  to {
-    transform: scale(1.2);
-  }
-}
-.InformationFooter {
-  display: flex;
-  align-items: center;
-  color: rgb(105, 105, 105);
-  border: 1px solid #eeeeee;
-}
-.InformationFooter div {
-  display: flex;
-  align-items: center;
-}
-/* main-Profile, SNS */
-.ProfileSNS .Boxheader {
-  color: #9b86b1;
-  justify-content: left;
-  align-items: center;
-}
-.ProfileSNS .BoxMain {
-  display: grid;
-  grid-template-rows: 1fr auto;
-  color: #d8c5ec;
-}
-.ProfileSNS a {
-  text-decoration: none;
-  position: relative;
+/* 버튼 및 a 태그 */
+button,
+a {
+  transition: all 0.4s ease-in;
   color: inherit;
-  transition: 0.5s;
+  cursor: pointer;
 }
-.SnsHeader {
-  grid-row: 1/2;
-  display: grid;
-  grid-template-columns: 0.5fr 1fr;
+button {
+  border: none;
+  background-color: transparent;
 }
-.SnsImg {
-  grid-column: 1/2;
+/* a 태그 */
+a {
+  text-decoration: none;
+}
+/* color */
+.redColor {
+  color: rgb(255, 77, 77);
+}
+.blueColor {
+  color: rgb(13, 121, 243);
+}
+.puppleColor {
+  color: rgb(187, 104, 226);
+}
+.greenColor {
+  color: rgb(91, 226, 192);
+}
+.grayColor {
+  color: rgb(75, 75, 75);
+}
+.lightgrayColor {
+  color: rgb(194, 194, 194);
+}
+.yellowColor {
+  color: rgb(250, 220, 122);
+}
+/* Box */
+/* border */
+.borderBox {
+  padding: 15px;
+  border-radius: 0.5em;
+  overflow: hidden;
+  transition: all 0.4s ease-in;
+}
+.notPaddingBox {
+  border-radius: 0.5em;
+  overflow: hidden;
+  transition: all 0.4s ease-in;
+}
+/* glowBox */
+.glowBox,
+.darkGlowBox {
+  transition: all 0.4s ease-in;
+  position: relative;
+  align-items: center;
+  padding: 15px;
+  border-radius: 0.5em;
   overflow: hidden;
 }
-.SnsImg img {
-  border: 8px solid #d8c5ec;
-  border-radius: 50%;
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-}
-.SnsHeaderDetail {
-  grid-column: 2/3;
-  text-align: center;
-  display: grid;
-  grid-template-rows: repeat(2, auto);
-}
-.SnsNumber {
-  grid-row: 1/2;
-  align-self: flex-end;
-}
-.SnsText {
-  color: #9b86b1;
-  grid-row: 2/3;
-  align-self: flex-start;
-}
-.SnsBtn {
-  grid-row: 2/3;
-  display: grid;
-  grid-template-rows: auto auto 1fr 0.5fr;
-  grid-template-columns: 1fr 1fr 0.5fr;
-}
-.SnsID {
-  color: #9b86b1;
-  grid-row: 1/2;
-  grid-column: 1/4;
-}
-.SnsDetail {
-  grid-row: 2/3;
-  grid-column: 1.4;
-  margin-left: 0.5em;
-  margin-top: -0.5em;
-}
-.SnsBtn button {
-  cursor: pointer;
-  padding: 0.3em;
-  font-family: "LOTTERIACHAB";
-  color: white;
-  background-color: #9b86b1;
-  border-radius: 1.5em;
-  border: none;
-  grid-row: 3/4;
-}
-.SnsBtn button:nth-of-type(1) {
-  grid-column: 1/2;
-}
-.SnsBtn button:nth-of-type(2) {
-  grid-column: 2/3;
-  color: #9b86b1;
-  background-color: white;
-  border: 2px solid #9b86b1;
-}
-.SnsIconBtn {
-  grid-column: 3/4;
-}
-.Snsfooter {
-  grid-row: 4/5;
-  grid-column: 1/4;
-  display: flex;
-  justify-content: space-around;
-}
-/* main-Profile, music */
-.ProfileMusic .Box {
-  background: url("images/stacked-waves-haikei.svg") center/cover no-repeat;
-}
-.ProfileMusic .BoxMain {
-  padding: 0.2em;
-  align-items: center;
-  justify-items: center;
-}
-.MusicSection {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-rows: 1fr auto;
-}
-#audioImg {
-  grid-row: 1/2;
-  background: url("images/CD.png") center/contain no-repeat;
-}
-.myAudio {
-  display: flex;
-  flex-direction: column;
-}
-.musicVolume {
-  display: grid;
-  grid-template-rows: 1fr auto;
-  grid-template-columns: repeat(3, 1fr);
-}
-#audioBar {
-  grid-row: 1/2;
-  grid-column: 1/4;
-  -webkit-appearance: none;
-  height: 5px;
-  border-radius: 0.5em;
-  background: linear-gradient(to right, #dae2f8, #9cabcf);
-  outline: none;
-}
-#currentTime {
-  grid-row: 2/3;
-  grid-column: 1/2;
-  text-align: left;
-}
-#durationTime {
-  grid-row: 2/3;
-  grid-column: 3/4;
-  text-align: right;
-}
-.musicBtn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#audioVolumn,
-#audioPlay,
-#audioHeart,
-.MusicHeaderBtn,
-.AboutSkill .Boxheader button {
-  color: #9cabcf;
-  background-color: transparent;
-  border-radius: 50%;
-  padding: 0.5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#audioVolumn,
-#audioPlay,
-#audioHeart {
-  box-shadow: -2px -2px 3px #dae2f8, 2px 2px 3px #bccaec;
-  border: 1px solid #dae2f8;
-}
-#audioPlay {
-  background-color: #9cabcf;
-  border: 1px solid #9e9ec4;
-  color: white;
-}
-.MusicHeaderBtn {
-  padding: 0.2em;
-  box-shadow: -2px -2px 3px #ffffff, 2px 2px 3px #c9d3ec;
-  border: 1px solid #ffffff;
-}
-/* input:range 커스텀 */
-/* 슬라이더 핸들(클릭해서 드래그하는 부분) 커스텀  */
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #9cabcf;
-  border: 5px solid white;
-  box-shadow: -2px -2px 3px white, 2px 2px 3px rgb(214, 214, 214);
-  cursor: pointer;
-  /* 슬라이더 핸들에 마우스를 갖다대면 포인터로 변경 */
-}
-input[type="range"]::-moz-range-thumb {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #9cabcf;
-  border: 5px solid white;
-  box-shadow: -2px -2px 3px white, 2px 2px 3px rgb(214, 214, 214);
-  cursor: pointer;
-  /* 슬라이더 핸들에 마우스를 갖다대면 포인터로 변경 */
-}
-/* main-AboutMe, title */
-#AboutSection .SectionTitle .Box {
-  background: url("images/Cloudy2.svg") bottom/cover no-repeat;
-}
-/* main-AboutMe, History */
-.HistorySection,
-.HistorySection2 {
-  display: flex;
-  flex-direction: column;
-}
-.HistoryText {
-  margin-left: 0.5em;
-}
-/* main-AboutMe, Skill1 */
-.AboutSkill .Box {
-  background: url("images/Circlebackground.jpg") center/cover no-repeat;
-  padding: 0.5em;
-  grid-template-rows: auto 1fr auto;
-}
-.Blur {
-  grid-row: 1/3;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  position: relative;
-}
-.Blur::before {
+.glowBox::before,
+.darkGlowBox::before {
+  transition: all 0.4s ease-in;
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.499);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 0.5em;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(211, 211, 211, 0.25);
+  z-index: -1;
 }
-.SkillTitle {
+.darkGlowBox::before {
+  background: rgba(53, 53, 53, 0.459);
+  border: 1px solid rgba(109, 109, 109, 0.404);
+}
+/* header */
+header,
+footer,
+.photoSection .appBody,
+.instaBody {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  justify-content: space-between;
 }
-#currentSkill {
-  font-weight: bold;
-}
-.SkillButtons {
+.headerTop {
+  gap: 20px;
   width: 100%;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  background-color: white;
-  border-radius: 1.5em;
   padding: 0.5em;
+  color: rgba(255, 255, 255, 0.747);
 }
-.SkillButtons div {
+.headerText {
+  gap: 5px;
+}
+.headerIcon {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+.headerText,
+.musicBody,
+.musicText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.headerMusic {
+  display: grid;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+.headerMusic .glowBox,
+.musicHeader {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+}
+.musicHeader {
+  grid-template-rows: none;
+  grid-template-columns: 0.5fr 2fr;
+}
+.musicImg {
+  background: url("images/music2.jpg") no-repeat center/cover;
+  width: 150px;
+  height: 150px;
+}
+.musicText {
+  align-items: flex-start;
+  justify-content: center;
+}
+.musicBody {
+  gap: 10px;
+}
+.musicBtn {
   display: flex;
   justify-content: space-around;
 }
-.SkillBtnSpan.SelectSkill {
-  color: #97aada;
+.musicBar,
+.musicVolume {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
 }
-.AboutSkill .Boxheader button {
-  color: white;
-  background-color: #c5d3f5;
+.musicVolume {
+  width: 90%;
 }
-.AboutSkill .Boxheader button {
-  border: none;
+.musicBtn button:hover {
+  color: rgba(255, 255, 255, 0.575);
 }
-.AboutSkillSection {
+.headerMusic input[type="range"] {
+  width: 100%;
+  height: 8px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: rgba(255, 255, 255, 0.404);
+  border-radius: 0.5em;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+}
+.headerMusic input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0;
+  height: 0;
+}
+.headerMusic input::-moz-range-thumb {
+  width: 0;
+  height: 0;
+}
+/* main */
+.mainSection {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+}
+.appBox {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 5px;
+}
+.appFooter {
+  text-align: center;
+  color: white;
+}
+/* mainHeader */
+.mainHeader,
+.mainFooter {
+  flex: 1;
   text-align: center;
 }
-#Skillchart,
-svg {
+.mainHeader,
+.mainFooter,
+.mainFooter .glowBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainPageToggle {
+  padding: 5px;
+  width: 100px;
+  height: 20px;
+  border-radius: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+}
+.pageBtn {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.432);
+  transition: all 0.4s ease;
+}
+.pageBtn.movePage {
+  background-color: rgba(34, 34, 34, 0.979);
+  transform: translateX(75px);
+}
+.mainFooter .glowBox {
+  border-radius: 1.5em;
+  padding: 5px;
+  gap: 10px;
+}
+.mainFooter a {
+  display: inline-block;
+  text-decoration: none;
+}
+.mainFooter a:hover {
+  transform: scale(1.2);
+}
+.myPageApp {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  border-radius: 0.5em;
+}
+.Git {
+  background-color: black;
+  color: white;
+}
+.BackJone {
+  background-color: white;
+  color: rgb(11, 107, 216);
+}
+.Tistory {
+  background-color: rgb(250, 82, 60);
+  color: white;
+}
+.mainBody {
   width: 100%;
   height: 100%;
-}
-svg {
-  display: block;
-}
-/* main-AboutMe, Skill2 */
-.AboutSkill2 .BoxMain {
-  padding: 0.5em 0em;
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 0.2em;
+  grid-template-rows: 1fr 0.25fr 1.25fr;
+  grid-template-columns: 0.8fr 0.2fr 1fr 1fr;
+  padding: 1em;
+  row-gap: 10px;
+  column-gap: 20px;
+  justify-content: center;
 }
-.SkillMenu {
-  grid-column: 2/3;
-}
-.SkillLink {
+/* main - photo */
+.photoSection {
+  grid-row: 1/2;
   grid-column: 1/2;
-  display: grid;
-  gap: 0.3em;
-  grid-template-rows: repeat(3, 1fr);
 }
-.AboutSkill2 a {
-  padding: 0.3em;
-  margin-right: 0.3em;
-  border-top-right-radius: 1em;
-  border-bottom-right-radius: 1em;
-  background-color: rgba(255, 255, 255, 0.486);
-  color: rgb(189, 158, 255);
-  text-decoration: none;
+.photoSection .appBody {
+  background: url("images/profileImg2.jpg") no-repeat center/cover;
+}
+.photoHeader {
+  color: white;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 5px 0px 5px;
+}
+.photoHeader div {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+}
+.photoHeader .glowBox {
   display: grid;
-  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 4px 6px;
+  border-radius: 1.5em;
+}
+.photoFooter {
+  z-index: 2;
+  border-radius: 0;
+  padding: 3px 3px 5px 3px;
+  display: flex;
+  justify-content: space-around;
+}
+.photoIcon {
+  color: rgb(59, 59, 59);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* main - time */
+.timeSection {
+  grid-row: 1/2;
+  grid-column: 2/4;
+}
+.timeSection .appBody {
+  background: url("images/time2.jpg") no-repeat center/cover;
+}
+#timeBox,
+#dateBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.651);
+  gap: 5px;
+}
+#dateBox {
+  align-items: center;
+}
+/* main - profile */
+.profileSection {
+  grid-row: 2/4;
+  grid-column: 1/3;
+}
+.profileSection .borderBox,
+.profileHeader,
+.profileSection .glowBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.747);
+}
+.profileSection .borderBox {
+  width: 100%;
+  height: 100%;
+  background: url("images/profile2.jpg") no-repeat center/cover;
+}
+.profileSection .glowBox {
+  z-index: 2;
+  align-items: flex-start;
+  gap: 5px;
+  width: 100%;
+  color: white;
+}
+.profileTitle {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 5px;
+}
+.profileTitle i {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  border-radius: 0.5em;
+  background-color: white;
+}
+/* main - history */
+.historySection {
+  grid-row: 2/4;
+  grid-column: 3/4;
+  height: 100%;
+  width: 100%;
+}
+.historySection .appBody,
+.historyHeaderIcon,
+.historyMain,
+.historyDetail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.historySection .appBody {
+  background-color: white;
+  padding-bottom: 0;
+}
+.historyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.historyHeaderIcon {
+  flex-direction: row;
+}
+.historyImg {
+  background: url("images/memo2.jpg") no-repeat center/cover;
+}
+.historyYear::before {
+  content: "○";
+  padding-right: 3px;
+  color: rgb(90, 90, 90);
+  vertical-align: middle;
+}
+.historyDetail {
+  padding-left: 10px;
+  gap: 2px;
+}
+/* main - insta */
+.instaSection {
+  grid-row: 1/3;
+  grid-column: 4/5;
+}
+.instaSection .appBody,
+.instaBody {
+  background: url("images/instagram2.jpg") no-repeat center/cover;
+}
+.instaBody {
+  width: 100%;
+  height: 100%;
+  box-shadow: 2px 3px 5px rgba(75, 75, 75, 0.185);
+}
+.instaHeader,
+.instaFooter {
+  background-color: rgba(255, 255, 255, 0.671);
+  padding: 5px;
+  text-align: center;
+}
+.instaHeader {
+  display: flex;
+  flex-direction: column;
+}
+.instaFooter {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.instaFooter a {
+  padding: 6px 0px;
+}
+.instaFooter a:hover {
+  color: rgb(11, 107, 216);
+}
+.instaFooter a:nth-of-type(1) {
+  border-right: 1px solid rgb(121, 121, 121);
+}
+/* main - Skill */
+.skillSection {
+  grid-row: 3/4;
+  grid-column: 4/5;
+  background: url("images/skill.jpg") no-repeat center/cover;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 10px;
+}
+.skillHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.747);
+}
+.skillHeader span:nth-of-type(1) {
+  height: 3px;
+  width: 30px;
+  background-color: rgba(255, 255, 255, 0.747);
+  border-radius: 0.5em;
+}
+.skillBody,
+.skillBox {
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-items: center;
+  gap: 5px;
+  color: rgba(39, 39, 39, 0.767);
+}
+.skillBody {
+  height: 100%;
+}
+.skillBox {
+  padding: 10px;
+  align-items: center;
+}
+.skillName {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.skillName span {
+  border-radius: 1em;
+  padding: 5px;
+}
+.skillBox:nth-of-type(odd) .skillTitle {
+  margin-right: auto;
+}
+.skillBox:nth-of-type(even) .skillTitle {
+  margin-left: auto;
+}
+/* footer */
+.footerBody,
+.footerProfile,
+.footerIconSet,
+.footerIcon {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  gap: 10px;
+}
+.footerImg {
+  background: url("images/profileImg2.jpg") no-repeat center/cover;
+  border-radius: 50%;
+}
+.footerIconSet {
+  flex-direction: row;
+}
+footer input {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.toggleSwitch {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 3em;
+}
+.toggleBtn {
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+  transition: all 0.4s ease-in;
+}
+.toggleText {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+/* check */
+footer input:checked + .toggleSwitch {
+  background: rgba(53, 53, 53, 0.459);
 }
