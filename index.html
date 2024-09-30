@@ -4,7 +4,7 @@
     <title>About Me</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -354,10 +354,6 @@
               <span class="fa-solid fa-wifi"></span>
               <span class="fa-solid fa-battery-three-quarters"></span>
             </div>
-            <div class="headerText">
-              <span class="timeDate Tenada headerTitle"></span>
-              <span class="Tenada titleSize headerTitle">About Me</span>
-            </div>
           </div>
           <div class="footerBody">
             <div class="footerProfile">
@@ -368,14 +364,24 @@
               <input type="checkbox" id="backSwitch" />
               <label for="backSwitch" class="toggleSwitch glowBox">
                 <span class="toggleBtn"></span>
-                <span class="toggleText Tenada">처음으로 이동</span>
+                <div class="toggleText Tenada notPaddingBox">
+                  <span id="toggleText">처음으로 이동</span>
+                </div>
               </label>
             </div>
           </div>
           <div class="footerIconSet">
             <div class="footerIcon">
-              <i class="fa-solid fa-rainbow"></i>
-              <span>박애진</span>
+              <i class="fa-solid fa-power-off"></i>
+              <span>Shut Down</span>
+            </div>
+            <div class="footerIcon">
+              <i class="fa-regular fa-copyright"></i>
+              <span>AeJin</span>
+            </div>
+            <div class="footerIcon">
+              <i class="fa-solid fa-toolbox"></i>
+              <span>vsCode</span>
             </div>
           </div>
         </footer>

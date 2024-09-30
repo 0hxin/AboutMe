@@ -322,7 +322,7 @@ $(document).ready(function () {
 
   // footer - 처음으로
   const backSwitch = $("#backSwitch");
-  const toggleText = $(".toggleText");
+  const toggleText = $("#toggleText");
   backSwitch.on("change", function () {
     if (backSwitch.is(":checked")) {
       toggleText.hide("slow");
