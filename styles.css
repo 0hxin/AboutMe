@@ -28,7 +28,8 @@
   .instaHeader .Pretend {
     font-size: 8px;
   }
-  .skillName {
+  .skillName,
+  .historyDetail {
     font-size: 10px;
   }
   .musicHeader span:nth-of-type(1),
@@ -37,26 +38,23 @@
   .photoIcon i,
   .instaBody,
   .skillHeader,
-  .skillTitle {
+  .skillTitle,
+  .historyHeader,
+  .historyYear {
     font-size: 12px;
   }
   .profileHeader i {
     font-size: 15px;
   }
-  .historyHeader,
-  .historyDetail {
-    font-size: 17px;
-  }
   .headerText .headerTitle:nth-of-type(1),
-  #currentDate,
-  .historyYear {
-    font-size: 20px;
+  #currentDate {
+    font-size: 17px;
   }
   .profileHeader span {
     font-size: 35px;
   }
   .titleSize {
-    font-size: 55px;
+    font-size: 45px;
   }
   .timeBoxNowTime {
     font-size: 65px;
@@ -78,7 +76,7 @@
     font-size: 25px;
   }
   .historyImg {
-    height: 195px;
+    height: 105px;
   }
   .profileTitle i {
     width: 25px;
